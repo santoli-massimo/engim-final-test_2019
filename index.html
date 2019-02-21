@@ -10,22 +10,19 @@
 
     <title>Hello, world!</title>
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="style/main.css">
 
   </head>
   <body>
-    <ul class="nav">
+    <ul class="nav" id="main-nav">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Active</a>
+                  <a class="nav-link active" data-page="homepage">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" data-page="page1" >Page 1</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  <a class="nav-link" data-page="page2">Page 2</a>
                 </li>
     </ul>
 
@@ -35,8 +32,16 @@
 
     <div id="pages">
 
-        <div class="container">
+        <div id="homepage" class="container">
             <h1>Homepage</h1>
+        </div>
+
+        <div id="page1" class="container">
+                <h1>Page 1</h1>
+        </div>
+
+        <div id="page2" class="container">
+                <h1>Page 2</h1>
         </div>
 
     </div>
