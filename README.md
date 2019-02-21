@@ -6,7 +6,7 @@
 
 ## Inserire nel subnav a sinistra un orologio: mostrare ora data minuto secondo (Flavio, task completed)
 
-## Inserire main nav un input che faccia ricerca di testo nella pagina e colora i risultati 
+## Inserire main nav un input che faccia ricerca di testo nella pagina e colora i risultati (Olga)
 
 ## Creare un tasto back
 

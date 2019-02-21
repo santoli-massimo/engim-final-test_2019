@@ -28,3 +28,30 @@ mainNav.addEventListener('click', function(e){
     }
 
 })
+
+var btCerca = document.getElementById('btcerca');
+document.getElementById('scrivi').innerHTML = " ";
+
+btCerca.addEventListener('click', function(e){
+  var parola = document.getElementById('txtcerca').value;
+  if (parola != ""){
+    document.getElementById('scrivi').innerHTML = " ";
+    var txt = document.getElementById('testoBacon').textContent;
+    if(txt.includes(parola)){
+      var parole = txt.split(' ');
+      for(var i=0; i<parole.length; i++){
+        var parolaNew = parole[i].replace(/(~|`|!|@|#|$|%|^|&|\*|\(|\)|{|}|\[|\]|;|:|\"|'|<|,|\.|>|\?|\/|\\|\||-|_|\+|=)/g, "");
+        if(parolaNew.trim().toLowerCase() == parola){
+            parole[i] = '<span style="background-color: brown; color:white;">' + parole[i] + "</span>";
+            document.getElementById('testoBacon').innerHTML = parole.join(' ');
+        }
+      }
+    }
+    else{
+      document.getElementById('scrivi').innerHTML = "Parola " + parola + " non è stata trovata.";
+    }
+    document.getElementById('txtcerca').value = "";
+  }
+  else
+    document.getElementById('scrivi').innerHTML = "Immettere parola da cercare!";
+});
