@@ -2,7 +2,7 @@
 # GIT Exercises for 2019 engim class
 
 
-# Gruppi
+# Gruppi (Scrivete i nomi sotto ai gruppi qui nel readme)
 
 ## Inserire nel subnav a sinistra un orologio: mostrare ora data minuto secondo
 
