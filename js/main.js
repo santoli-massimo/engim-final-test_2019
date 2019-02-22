@@ -4,13 +4,15 @@ var mainNav = document.getElementById('main-nav')
 var navli = document.querySelectorAll('#pages > .container')
 
 /*Clock's variables*/ 
-var time = new Date;
-var clock = [time.getHours(), time.getMinutes(), time.getSeconds()];
-var date = [time.getDate(), time.getMonth(), time.getFullYear()];
-var timefunc = document.getElementById("time").innerHTML = 
-              clock.join(' : ') + 
-              " - " + 
-              date.join('/');
+//time.getMonth() ritorna valori tra 0 e 11 e non tra 1 e 12.           
+setInterval(function(){ 
+  var time = new Date;
+  var clock = [time.getHours(), time.getMinutes(), time.getSeconds()];
+  var date = [time.getDate(), time.getMonth()+1, time.getFullYear()];
+  document.getElementById("time").innerHTML = 
+                clock.join(' : ') + 
+                " - " + 
+                date.join('/'); }, 1000);
 
 console.log({navli});
 
