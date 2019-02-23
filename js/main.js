@@ -14,7 +14,7 @@ setInterval(function(){
                 " - " + 
                 date.join('/'); }, 1000);
 
-console.log({navli});
+//console.log({navli});
 
 
 mainNav.addEventListener('click', function(e){

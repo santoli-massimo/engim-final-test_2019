@@ -4,9 +4,12 @@
 
 # Gruppi (Scrivete i nomi sotto ai gruppi qui nel readme)
 
-## Inserire nel subnav a sinistra un orologio: mostrare ora data minuto secondo (Flavio, task completed)
+## Inserire nel subnav a sinistra un orologio: mostrare ora data minuto secondo
+- Flavio, task completed
 
-## Inserire main nav un input che faccia ricerca di testo nella pagina e colora i risultati (Olga)
+## Inserire main nav un input che faccia ricerca di testo nella pagina e colora i risultati
+- Olga (locale)
+- Nicolas (globale)
 
 ## Creare un tasto back
 
