@@ -1,3 +1,53 @@
+/*Calcolatrice*/
+#calcolatrice{
+    text-align: center;
+    margin: 0 auto;
+    border: 3px aquamarine solid;
+    background-color: rgb(29, 194, 139);
+}
+
+#calcolatrice td button{
+    margin: 1%;
+    width:30px;
+    border: 3px aquamarine solid;
+    border-radius: 10px;
+    background-color: blueviolet;
+    text-align: center;
+ }
+
+ #calcolatrice td button:hover{
+    background-color: rgb(181, 115, 243);
+}
+
+ #calcolatrice tr input{
+    margin: 1%;
+    width:90%;
+    border: 3px aquamarine solid;
+    border-radius: 10px;
+ }
+
+
+
+
+
+/*Fine_calcolatrice*/
+
+/*Orologio*/
+#time {
+    display: table-cell;
+    vertical-align: middle;
+    float: right;
+    border-radius: 10%;
+    background-color: aquamarine;
+}
+
+#time:hover {
+    background-color: rgb(29, 194, 139);
+}
+
+
+/*Fine_orologio*/
+
 
 .nav {
     background-color: aquamarine;
@@ -9,21 +59,19 @@
     cursor: pointer;
 }
 
-#time {
-    display: table-cell;
-    vertical-align: middle;
-    background-color: aquamarine;
+.nav li:hover{
+    background-color: rgb(29, 194, 139);
 }
-
 #pages h1{
     background-color: blueviolet;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     border-right: 1px solid black;
     padding: 1%;
+    border-radius: 10%;
     text-align: center;
-    margin-left: 10%;
-    margin-right: 75%;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 #pages > .container:not(#homepage) {

@@ -35,9 +35,7 @@
   </aside>
 
   <ul class="nav" id="main-nav">
-    <li> 
-      <button id="time" ></button>
-    </li>
+ 
     <li class="nav-item">
       <a class="nav-link active" data-page="homepage">Home</a>
     </li>
@@ -50,10 +48,15 @@
     <li class="nav-item">
       <a class="nav-link" data-page="page3">Page Cerca</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" data-page="page4">Calcolatrice</a>
+    </li>
   </ul>
 
   <div id="subnav">
-    
+    <li> 
+      <button id="time"></button>
+    </li>
   </div>
   
   <div id="pages">
@@ -141,7 +144,6 @@
     
     <div id="page3" class="container">
       <h1>Page Cerca</h1>
-      
       <div class="barraCerca">
         <div class="input-group mb-3">
           <input type="text" id="txtcerca" class="form-control" aria-label="Cerca Testo" aria-describedby="basic-addon2">
@@ -181,6 +183,55 @@
           Does your lorem ipsum text long for something a little meatier? Give our generator a try... it is tasty!
         </p>
       </div>
+    </div>
+
+    <div id="page4" class="cal">
+      <h1>Calcolatrice base</h1>
+      <form name="calc">
+         
+
+        <table id="calcolatrice"> 
+        <tr>
+          <td colspan="5"><input type="text" name="risultato"></td>
+         </tr>
+        <tr>
+          <td><button type="button" name="7">7</button></td>
+          <td><button type="button" name="8">8</button></td>
+          <td><button type="button" name="9">9</button></td>
+          <td><button type="button" name="/">/</button></td>
+          <td><button type="button" name="-+">-+</button></td>
+        </tr>
+        <tr>
+          <td><button type="button" name="4">4</button></td>
+          <td><button type="button" name="5">5</button></td>
+          <td><button type="button" name="6">6</button></td>
+          <td><button type="button" name="*">*</button></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><button type="button" name="1">1</button></td>
+          <td><button type="button" name="2">2</button></td>
+          <td><button type="button" name="3">3</button></td>
+          <td><button type="button" name="-">-</button></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><button type="button" name="C">C</button></td>
+          <td><button type="button" name="0">0</button></td>
+          <td><button type="button" name=",">,</button></td>
+          <td><button type="button" name="+">+</button></td>
+          <td><button type="button" name="=">=</button></td>
+        </tr>
+        </table>
+
+                      
+
+
+          </div> 
+        </form>
+      
+
+      <div id="lista"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
