@@ -1,24 +1,61 @@
 
 # GIT Exercises for 2019 engim class
 
+## Gruppi
+*Scrivete i nomi sotto ai gruppi qui nel readme*
 
-# Gruppi (Scrivete i nomi sotto ai gruppi qui nel readme)
+1. Inserire nel subnav a sinistra un orologio: mostrare ora data minuto secondo
+    > **Flavio:** *task completed*
 
-## Inserire nel subnav a sinistra un orologio: mostrare ora data minuto secondo
-- Flavio, task completed
+2. Inserire main nav un input che faccia ricerca di testo nella pagina e colora i risultati
+    > **Olga [versione locale]:** *status*
 
-## Inserire main nav un input che faccia ricerca di testo nella pagina e colora i risultati
-- Olga (locale)
-- Nicolas (globale)
+    > **Nicolas [versione globale]:** *work in progress*
 
-## Creare un tasto back
+3. Creare un tasto back
+    > **???:** *status*
 
-## Creare una pagina con un form con campi nome cognome che crea una nuovo oggetto persona, visualizzare lista delle persone sotto al form ( se fatto in gruppo fare anche il rimuovi persona)
+4. Creare una pagina con un form con campi nome cognome che crea una nuovo oggetto persona, visualizzare lista delle persone sotto al form ( se fatto in gruppo fare anche il rimuovi persona)
+    > **???:** *status*
 
-## Creare una pagina con una select con i nomi di animali, al select mostrare la foto dell animale sotto alla select
+5. Creare una pagina con una select con i nomi di animali, al select mostrare la foto dell animale sotto alla select
+    > **???:** *status*
 
-## Creare una pagina con una calcolatrice
+6. Creare una pagina con una calcolatrice
+    > **???:** *status*
 
-## Creare una pagina con vari paragrafi al click cambiare colore al pargrafo
+7. Creare una pagina con vari paragrafi al click cambiare colore al pargrafo
+    > **???:** *status*
 
+***
 
+## Comunicazioni di servizio
+
+*Qui di seguito possiamo scrivere tutto quello che serve per coordinare le varie sezioni del progetto, consigli, bug, ecc.*
+
+- **Per tutti:** mi sono permesso di modificare questo file in modo che possiamo usarlo per aggiornare lo stato di avanzamento. Vi prego di aggiornare lo stato di avanzamento e i task che sono ancora orfani se decidete di farli. La formattazione del markdown (il linguaggio usato per questo readme) è abbastanza semplice, ma a beneficio di tutti ho creato dei template sia dei gruppi di task che di messaggio che vi basta copincollare e modificare. *Nicolas*
+
+- **Per Olga:** ho implementato un fix nella ricerca globale in modo da non avere confitti con quella locale. Per fare ciò devo fare riferimento a due dei tuoi `id`, che sono `txtBacon` e `txtcerca`. Se hai necessità di modificarli, please tell me!
+*Nicolas*
+
+- **Per tutti:** ho testato in vari modi la ricerca globale e mi sembra non ci siano bug e non si spacchi niente, ma se doveste trovare qualche bug vi prego di fare uno screenshot e farmelo avere! Più occhi notano molte più cose! Grazie!
+*Nicolas*
+
+***
+
+## Template
+- Task
+    > **(persona):** *status*
+
+    > **(persona1, persona2, persona3):** *status*
+
+*Se più persone/gruppi prendono parte allo stesso task, è necessario che ci sia una riga vuota a separare le due istanze.*
+
+- Comunicazione di servizio
+
+- **Per chi:** messaggio
+*Firma*
+
+***
+
+***Dai, ragazzi, che Google ci aspetta!***

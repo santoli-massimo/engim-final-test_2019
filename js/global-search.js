@@ -7,7 +7,7 @@ let matches = [];
 let allChildren = [];
 let searchRegex;
 const foundRegex = /(<span class="gs-found">)(.*)(<\/span>)/;
-const bacon = document.getElementById('testoBacon').innerHTML;
+const bacon = document.getElementById('txtBacon').innerHTML;
 
 searchbar.addEventListener('input', (ev) => {
     globalSearch(checkbox.checked, ev.target.value);
@@ -60,5 +60,5 @@ document.getElementById('txtcerca').addEventListener('input', (ev) => {
 });
 
 function clearLocalSearch() {
-    document.getElementById('testoBacon').innerHTML = bacon;
+    document.getElementById('txtBacon').innerHTML = bacon;
 }
