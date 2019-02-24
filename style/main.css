@@ -1,5 +1,6 @@
 /*Calcolatrice*/
 #calcolatrice{
+    font-size: 30px;
     text-align: center;
     margin: 0 auto;
     border: 3px aquamarine solid;
@@ -8,7 +9,7 @@
 
 #calcolatrice td button{
     margin: 1%;
-    width:30px;
+    width: 60px;
     border: 3px aquamarine solid;
     border-radius: 10px;
     background-color: blueviolet;
@@ -20,6 +21,7 @@
 }
 
  #calcolatrice tr input{
+    text-align: right;
     margin: 1%;
     width:90%;
     border: 3px aquamarine solid;

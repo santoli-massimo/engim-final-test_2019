@@ -190,35 +190,35 @@
 
         <table id="calcolatrice"> 
         <tr>
-          <td colspan="5"><input type="number" value="" id="risultato"></td>
-         </tr>
-        <tr>
-          <td><button type="button" value="7" onclick="add(7)">7</button></td>
-          <td><button type="button" value="8" onclick="add(8)">8</button></td>
-          <td><button type="button" value="9" onclick="add(9)">9</button></td>
-          <td><button type="button" value="/" onclick="math('/')">/</button></td>
-          <td><button type="button" value="-+" onclick="change()">-+</button></td>
+          <td colspan="5"><input type="text" id="risultato" disabled></td>
         </tr>
         <tr>
-          <td><button type="button" value="4" onclick="add(4)">4</button></td>
-          <td><button type="button" value="5" onclick="add(5)">5</button></td>
-          <td><button type="button" value="6" onclick="add(6)">6</button></td>
-          <td><button type="button" value="*" onclick="math('*')">*</button></td>
+          <td><button type="button" value="7" onclick="addCalc('7')">7</button></td>
+          <td><button type="button" value="8" onclick="addCalc('8')">8</button></td>
+          <td><button type="button" value="9" onclick="addCalc('9')">9</button></td>
+          <td><button type="button" value="/" onclick="addCalc('/')">/</button></td>
+          <td><button type="button" value="-+" onclick="changeCalc()">-+</button></td>
+        </tr>
+        <tr>
+          <td><button type="button" value="4" onclick="addCalc('4')">4</button></td>
+          <td><button type="button" value="5" onclick="addCalc('5')">5</button></td>
+          <td><button type="button" value="6" onclick="addCalc('6')">6</button></td>
+          <td><button type="button" value="*" onclick="addCalc('*')">*</button></td>
           <td></td>
         </tr>
         <tr>
-          <td><button type="button" value="1" onclick="add(1)">1</button></td>
-          <td><button type="button" value="2" onclick="add(2)">2</button></td>
-          <td><button type="button" value="3" onclick="add(3)">3</button></td>
-          <td><button type="button" value="-" onclick="math('-')">-</button></td>
+          <td><button type="button" value="1" onclick="addCalc('1')">1</button></td>
+          <td><button type="button" value="2" onclick="addCalc('2')">2</button></td>
+          <td><button type="button" value="3" onclick="addCalc('3')">3</button></td>
+          <td><button type="button" value="-" onclick="addCalc('-')">-</button></td>
           <td></td>
         </tr>
         <tr>
-          <td><button type="button" value="C" onclick="reset()">C</button></td>
-          <td><button type="button" value="0" onclick="add(0)">0</button></td>
-          <td><button type="button" value="," onclick="add('.')">,</button></td>
-          <td><button type="button" value="+" onclick="math('+')">+</button></td>
-          <td><button type="button" value="=" onclick="equals(document.forms['calc']['risultato'].value)">=</button></td>
+          <td><button type="button" value="C" onclick="resetCalc()">C</button></td>
+          <td><button type="button" value="0" onclick="addCalc('0')">0</button></td>
+          <td><button type="button" value="," onclick="addCalc('.')">,</button></td>
+          <td><button type="button" value="+" onclick="addCalc('+')">+</button></td>
+          <td><button type="button" value="=" onclick="equalsCalc()">=</button></td>
         </tr>
         </table>
 

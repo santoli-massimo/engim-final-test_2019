@@ -20,32 +20,47 @@ setInterval(updateClock, 1000);
 
     
 /*Calc*/
-function reset (){
-  document.forms['calc'].value;
-  }
+var display = document.getElementById('risultato');
+var displayString = '';
+var dotUsed = false;
+resetCalc();
 
-function add(n){
-  document.forms['calc']['risultato'].value += - "" + n;
-  console.log(n);
+function resetCalc() {
+  displayString = '0';
+  display.value = '0';
+}
+ 
+function addCalc(char) {
+  var lastChar = displayString[displayString.length -1];
+  switch (char) {
+    case '.':
+      if (dotUsed) {
+        return
+      } else {
+        dotUsed = true;
+        if (lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/') displayString = displayString + '0';
+      }
+    break;
+    case '+':
+    case '-':
+    case '*':
+    case '/':
+      dotUsed = false;
+    break;
   }
-  
-function math(n){
-  res = document.forms['calc']['risultato'].value + n;
-  document.forms['calc']['risultato'].value = "";
-  console.log(n);
-  console.log(res);
+  (displayString === '0' || displayString === '-0') ? displayString = char : displayString += char;
+  display.value = displayString;
 }
 
-function equals(n){
-  res = res + n;
-  console.log(res);
-  result = eval(res);
-  document.forms['calc']['risultato'].value = result;
-  res = '';
+function equalsCalc(){
+  displayString = "" + eval(displayString);
+  display.value = displayString;
+  displayString = '';
 }
 
-function change(){
-  document.forms['calc']['risultato'].value *= -1;
+function changeCalc(){
+  displayString[0] === '-' ? displayString = displayString.substring(1) : displayString = '-' + displayString;
+  display.value = displayString;
 }
 
 /* _______________________________ */
