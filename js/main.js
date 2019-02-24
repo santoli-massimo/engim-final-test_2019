@@ -8,16 +8,6 @@ setInterval(function(){
   var clock = [time.getHours(), time.getMinutes(), time.getSeconds()];
   var date = [time.getDate(), time.getMonth()+1, time.getFullYear()];
   document.getElementById("time").innerHTML = 
-<<<<<<< HEAD
-                clock.join(' : ') + 
-                " - " + 
-                date.join('/'); }, 1000);
-
-//console.log({navli});
-
-
-mainNav.addEventListener('click', function(e){
-=======
   clock.join(' : ') + 
   " - " + 
   date.join('/'); }, 1000);
@@ -26,7 +16,6 @@ mainNav.addEventListener('click', function(e){
   
   
   mainNav.addEventListener('click', function(e){
->>>>>>> 89c09e4cd4a3ef4181385264928144d88bb3099c
     if(e.target.dataset.page){
       
       for (let index = 0; index < navli.length; index++) {
