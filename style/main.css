@@ -34,9 +34,7 @@
 
 /*Orologio*/
 #time {
-    display: table-cell;
-    vertical-align: middle;
-    float: right;
+    float: left;
     border-radius: 10%;
     background-color: aquamarine;
 }
@@ -44,8 +42,6 @@
 #time:hover {
     background-color: rgb(29, 194, 139);
 }
-
-
 /*Fine_orologio*/
 
 
