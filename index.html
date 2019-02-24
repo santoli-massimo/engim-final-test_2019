@@ -1,107 +1,114 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-
-    <link rel="stylesheet" href="style/main.css">
-
-  </head>
-  <body>
-    <ul class="nav" id="main-nav">
-                <li> 
-                  <button id="time" ></button>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" data-page="homepage">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-page="page1" >Page 1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-page="page2">Page 2</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-page="page3">Page Cerca</a>
-                </li>
-    </ul>
-
-    <div id="subnav">
-        
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <title>Hello, world!</title>
+  
+  <link rel="stylesheet" href="style/main.css">
+  
+</head>
+<body>
+  <ul class="nav" id="main-nav">
+    <li> 
+      <button id="time" ></button>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" data-page="homepage">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-page="page1" >Page 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-page="page2">Form aggiungi</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-page="page3">Page Cerca</a>
+    </li>
+  </ul>
+  <div id="subnav">
+    
+  </div>
+  
+  <div id="pages">
+    
+    <div id="homepage" class="container">
+      <h1>Homepage</h1>
     </div>
-
-    <div id="pages">
-
-        <div id="homepage" class="container">
-            <h1>Homepage</h1>
+    
+    <div id="page1" class="container">
+      <h1>Page 1</h1>
+    </div>
+    
+    <div id="page2" class="container">
+      <h1>Form Aggiungi</h1>
+      <form name="persone" method="post">
+        <label>Nome</label>
+        <input type="text" name="nome">
+        <label>Cognome</label>
+        <input type="text" name="cognome">
+        <button class="btn btn-outline-secondary" type="button" name="Aggiungi">Aggiungi</button>
+      </form>
+      <div id="lista"></div>
+    </div>
+    
+    <div id="page3" class="container">
+      <h1>Page Cerca</h1>
+      
+      <div class="barraCerca">
+        <div class="input-group mb-3">
+          <input type="text" id="txtcerca" class="form-control" aria-label="Cerca Testo" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button id="btcerca" class="btn btn-outline-secondary" type="button">Cerca Parola</button>
+          </div>
         </div>
-
-        <div id="page1" class="container">
-                <h1>Page 1</h1>
-        </div>
-
-        <div id="page2" class="container">
-                <h1>Page 2</h1>
-        </div>
-
-        <div id="page3" class="container">
-          <h1>Page Cerca</h1>
-
-            <div class="barraCerca">
-              <div class="input-group mb-3">
-                <input type="text" id="txtcerca" class="form-control" aria-label="Cerca Testo" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <button id="btcerca" class="btn btn-outline-secondary" type="button">Cerca Parola</button>
-                </div>
-              </div>
-              <label id="write" style="color:red;">Per valore immetti parola!</label>
-            </div>
-            <div class="divtesto">
-              <p id="txtBacon">
-             Bacon ipsum dolor amet pancetta ham pig tail flank. Strip steak tenderloin turducken pancetta
-             drumstick jowl swine tail pork loin t-bone jerky. Meatloaf filet mignon pork belly sirloin boudin.
-             Pancetta ham hock corned beef filet mignon, picanha flank shank ribeye t-bone ham jerky.
-             Porchetta frankfurter pig leberkas pork chop, filet mignon fatback tenderloin.
-             Shank turducken frankfurter, filet mignon beef ribs cow doner pork belly burgdoggen kielbasa kevin.
-             Biltong beef ribs swine brisket short ribs pork loin turkey beef boudin corned beef.
-             Bresaola short ribs pork chop pork belly, kielbasa chuck jerky doner landjaeger.
-             Picanha buffalo corned beef pork tenderloin andouille, prosciutto flank burgdoggen hamburger.
-             Jowl meatloaf brisket rump short ribs pancetta chuck tongue boudin alcatra andouille ham hock
-             turducken pork chop pork belly. Pig tail ball tip venison bacon. Drumstick short loin jowl pig chuck,
-             beef ribs meatball beef capicola tail kevin pork leberkas.
-             Cow alcatra salami, landjaeger bresaola buffalo strip steak spare ribs beef ribs pig corned beef
-             cupim tri-tip short loin. Venison kielbasa shoulder shankle rump spare ribs beef ribs meatloaf
-             boudin tri-tip filet mignon prosciutto ground round. Strip steak shank kevin kielbasa bresaola.
-             Capicola ground round porchetta pig, pork filet mignon jowl turducken.
-             Kielbasa short loin salami shank sausage shoulder cupim bacon meatball. Alcatra brisket andouille
-             buffalo jowl sausage tenderloin. T-bone pastrami meatloaf alcatra, sirloin bacon filet mignon
-             brisket tri-tip shankle hamburger. Ham hock short ribs capicola, biltong frankfurter pork belly
-             swine turducken bacon strip steak.
-             Andouille ham picanha porchetta pancetta tail ham hock pig meatloaf, spare ribs bacon ball tip.
-             Jowl alcatra capicola short ribs tail cow pork belly. Burgdoggen tail boudin pork chop, shankle
-             ball tip kielbasa pork belly ribeye short loin picanha sausage kevin. Filet mignon beef t-bone alcatra.
-             Tri-tip turducken capicola, ham swine leberkas doner tenderloin spare ribs porchetta jerky sirloin
-             bacon alcatra salami. Beef ribs ground round tongue capicola chuck pork pork loin corned beef jerky
-             jowl shankle doner leberkas swine kielbasa. Rump ground round buffalo sirloin.
-             Does your lorem ipsum text long for something a little meatier? Give our generator a try... it is tasty!
-           </p>
-        </div>
+        <label id="write" style="color:red;">Per valore immetti parola!</label>
       </div>
-
+      <div class="divtesto">
+        <p id="txtBacon">
+          Bacon ipsum dolor amet pancetta ham pig tail flank. Strip steak tenderloin turducken pancetta
+          drumstick jowl swine tail pork loin t-bone jerky. Meatloaf filet mignon pork belly sirloin boudin.
+          Pancetta ham hock corned beef filet mignon, picanha flank shank ribeye t-bone ham jerky.
+          Porchetta frankfurter pig leberkas pork chop, filet mignon fatback tenderloin.
+          Shank turducken frankfurter, filet mignon beef ribs cow doner pork belly burgdoggen kielbasa kevin.
+          Biltong beef ribs swine brisket short ribs pork loin turkey beef boudin corned beef.
+          Bresaola short ribs pork chop pork belly, kielbasa chuck jerky doner landjaeger.
+          Picanha buffalo corned beef pork tenderloin andouille, prosciutto flank burgdoggen hamburger.
+          Jowl meatloaf brisket rump short ribs pancetta chuck tongue boudin alcatra andouille ham hock
+          turducken pork chop pork belly. Pig tail ball tip venison bacon. Drumstick short loin jowl pig chuck,
+          beef ribs meatball beef capicola tail kevin pork leberkas.
+          Cow alcatra salami, landjaeger bresaola buffalo strip steak spare ribs beef ribs pig corned beef
+          cupim tri-tip short loin. Venison kielbasa shoulder shankle rump spare ribs beef ribs meatloaf
+          boudin tri-tip filet mignon prosciutto ground round. Strip steak shank kevin kielbasa bresaola.
+          Capicola ground round porchetta pig, pork filet mignon jowl turducken.
+          Kielbasa short loin salami shank sausage shoulder cupim bacon meatball. Alcatra brisket andouille
+          buffalo jowl sausage tenderloin. T-bone pastrami meatloaf alcatra, sirloin bacon filet mignon
+          brisket tri-tip shankle hamburger. Ham hock short ribs capicola, biltong frankfurter pork belly
+          swine turducken bacon strip steak.
+          Andouille ham picanha porchetta pancetta tail ham hock pig meatloaf, spare ribs bacon ball tip.
+          Jowl alcatra capicola short ribs tail cow pork belly. Burgdoggen tail boudin pork chop, shankle
+          ball tip kielbasa pork belly ribeye short loin picanha sausage kevin. Filet mignon beef t-bone alcatra.
+          Tri-tip turducken capicola, ham swine leberkas doner tenderloin spare ribs porchetta jerky sirloin
+          bacon alcatra salami. Beef ribs ground round tongue capicola chuck pork pork loin corned beef jerky
+          jowl shankle doner leberkas swine kielbasa. Rump ground round buffalo sirloin.
+          Does your lorem ipsum text long for something a little meatier? Give our generator a try... it is tasty!
+        </p>
+      </div>
     </div>
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-
+    
+  </div>
+  
+  
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  
 </body>
 </html>

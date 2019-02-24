@@ -10,7 +10,7 @@
 
 ## Creare un tasto back
 
-## Creare una pagina con un form con campi nome cognome che crea una nuovo oggetto persona, visualizzare lista delle persone sotto al form ( se fatto in gruppo fare anche il rimuovi persona)
+## Creare una pagina con un form con campi nome cognome che crea una nuovo oggetto persona, visualizzare lista delle persone sotto al form ( se fatto in gruppo fare anche il rimuovi persona) (Daniele - Manca il rimuovi)
 
 ## Creare una pagina con una select con i nomi di animali, al select mostrare la foto dell animale sotto alla select
 
