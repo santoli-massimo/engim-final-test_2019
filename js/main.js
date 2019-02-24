@@ -32,15 +32,17 @@ mainNav.addEventListener('click', function(e){
 })
 
 var btCerca = document.getElementById('btcerca');
-document.getElementById('scrivi').innerHTML = " ";
+document.getElementById('write').innerHTML = " ";
 
 btCerca.addEventListener('click', function(e){
 var parola = document.getElementById('txtcerca').value;
 
-  if (parola != ""){
-    document.getElementById('scrivi').innerHTML = " ";
-    var txt = document.getElementById('testoBacon').textContent;
+var txt = document.getElementById('txtBacon').textContent;
 
+  if (parola != "" || parola != NaN){
+
+    document.getElementById('write').innerHTML = " ";
+    
     if(txt.includes(parola)){
       if (parola.includes("-")){
         var parole = txt.split(' ');
@@ -49,7 +51,7 @@ var parola = document.getElementById('txtcerca').value;
           if(parole[i].toLowerCase() == parola){
             parole[i] = '<span style="background-color: brown; color:white;">' + parole[i] + "</span>";
           }
-          document.getElementById('testoBacon').innerHTML = parole.join(' ');
+          document.getElementById('txtBacon').innerHTML = parole.join(' ');
         }
       } else{
 
@@ -63,18 +65,18 @@ var parola = document.getElementById('txtcerca').value;
               punt = parole[i].substring(parole[i].indexOf(parola) + parola.length);
               parole[i] = '<span style="background-color: brown; color:white;">' + parola + "</span>" + punt;
             }
-            document.getElementById('testoBacon').innerHTML = parole.join(' ');
+            document.getElementById('txtBacon').innerHTML = parole.join(' ');
           }
         }
       }
     }else{
-      document.getElementById('testoBacon').innerHTML = txt;
-      document.getElementById('scrivi').innerHTML = "Parola " + parola + " non è stata trovata.";
+      document.getElementById('txtBacon').innerHTML = txt;
+      document.getElementById('write').innerHTML = "Parola " + parola + " non è stata trovata.";
     }
     document.getElementById('txtcerca').value = "";
   }
   else{
-    document.getElementById('testoBacon').innerHTML = txt;
-    document.getElementById('scrivi').innerHTML = "Immettere parola da cercare!";
+    document.getElementById('txtBacon').innerHTML = txt;
+    document.getElementById('write').innerHTML = "Immettere parola da cercare!";
   }
 });
