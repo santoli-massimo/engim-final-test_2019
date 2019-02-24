@@ -23,8 +23,9 @@
 
 6. Creare una pagina con una calcolatrice
     > **Flavio:** *graphic completed, task 90%*
-    Bug: inserendo la virgola, automaticamente viene sempre fuori uno zero... se volete metterci lo zampino ben venga!
-    Bisogna ancora rendere iterativo l'uguale, per il resto è completo.
+
+    > **Nicolas:** *la soluzione di Daniele lasciava scoperto un altro bug, ovvero la possibilità di inserire più volte la virgola. Ho rimodificato il tutto, sembra funzionare ma deve essere ulteriormente testato nei casi limite. Ah, ho ingrandito la calcolatrice
+    che stavo diventando cieco!*
 
 7. Creare una pagina con vari paragrafi al click cambiare colore al pargrafo
     > **???:** *status*

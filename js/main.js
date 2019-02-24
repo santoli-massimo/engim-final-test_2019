@@ -48,8 +48,10 @@ function addCalc(char) {
       dotUsed = false;
     break;
   }
+
   (displayString === '0' || displayString === '-0') ? displayString = char : displayString += char;
   display.value = displayString;
+
 }
 
 function equalsCalc(){
