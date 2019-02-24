@@ -112,12 +112,12 @@ setInterval(function(){
         persone[i] = new Persona(nome, cognome);
         i++;
         //creo lista ordinata con nome e cognome persona sotto il form
-        tab.innerHTML='<ol><li id="0">'+persone[i-1].Nome+" "+persone[i-1].CogNome+'</li></ol>'
+        tab.innerHTML='<ol id="0"><li>'+persone[i-1].Nome+" "+persone[i-1].CogNome+'</li></ol>'
         for(var t=i-1;t>0;t--)
         {
           li=document.createElement('li');
-          lin=document.getElementsByTagName('ol');
-          lin[0].appendChild(li);
+          lin=document.getElementById('0');
+          lin.appendChild(li);
           li.innerHTML=persone[t-1].Nome+' '+persone[t-1].CogNome;
         }
       }
