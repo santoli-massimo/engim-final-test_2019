@@ -12,8 +12,40 @@ setInterval(function(){
   " - " + 
   date.join('/'); }, 1000);
   
-  console.log({navli});
-  
+  /* _______________________________ */ 
+
+    
+  /*Calc*/
+  function reset (){
+    document.forms['calc'].value;
+    }
+
+  function add(n){
+    document.forms['calc']['risultato'].value += - "" + n;
+    console.log(n);
+    }
+   
+  function math(n){
+    res = document.forms['calc']['risultato'].value + n;
+    document.forms['calc']['risultato'].value = "";
+    console.log(n);
+    console.log(res);
+  }
+
+  function equals(n){
+    res = res + n;
+    console.log(res);
+    result = eval(res);
+    document.forms['calc']['risultato'].value = result;
+    res = '';
+  }
+
+  function change(){
+    document.forms['calc']['risultato'].value *= -1;
+  }
+
+  /* _______________________________ */
+
   
   mainNav.addEventListener('click', function(e){
     if(e.target.dataset.page){

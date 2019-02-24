@@ -22,7 +22,9 @@
     > **???:** *status*
 
 6. Creare una pagina con una calcolatrice
-    > **Flavio:** *graphic completed*
+    > **Flavio:** *graphic completed, task 90%*
+    Bug: inserendo la virgola, automaticamente viene sempre fuori uno zero... se volete metterci lo zampino ben venga!
+    Bisogna ancora rendere iterativo l'uguale, per il resto è completo.
 
 7. Creare una pagina con vari paragrafi al click cambiare colore al pargrafo
     > **???:** *status*
