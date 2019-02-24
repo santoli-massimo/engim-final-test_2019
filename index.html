@@ -189,8 +189,8 @@
          
 
         <table id="calcolatrice"> 
-        <tr>
-          <td colspan="5"><input type="number" value="" id="risultato"></td>
+        <tr><!--per il fix tenere type=text ho modificare il fix-->
+          <td colspan="5"><input type="text" value="" id="risultato"></td>
          </tr>
         <tr>
           <td><button type="button" value="7" onclick="add(7)">7</button></td>
@@ -216,7 +216,7 @@
         <tr>
           <td><button type="button" value="C" onclick="reset()">C</button></td>
           <td><button type="button" value="0" onclick="add(0)">0</button></td>
-          <td><button type="button" value="," onclick="add('.')">,</button></td>
+          <td><button type="button" value="," onclick="vir('.')">,</button></td>
           <td><button type="button" value="+" onclick="math('+')">+</button></td>
           <td><button type="button" value="=" onclick="equals(document.forms['calc']['risultato'].value)">=</button></td>
         </tr>

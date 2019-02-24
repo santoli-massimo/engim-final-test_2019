@@ -28,6 +28,11 @@ function add(n){
   document.forms['calc']['risultato'].value += - "" + n;
   console.log(n);
   }
+// rimuove lo 0. e permette il calcolo con la virgola
+function vir(n){
+    document.forms['calc']['risultato'].value += "" + n;
+    console.log(n);
+    }
   
 function math(n){
   res = document.forms['calc']['risultato'].value + n;
