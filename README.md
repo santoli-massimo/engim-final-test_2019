@@ -22,7 +22,7 @@
     > **???:** *status*
 
 6. Creare una pagina con una calcolatrice
-    > **???:** *status*
+    > **Flavio:** *graphic completed*
 
 7. Creare una pagina con vari paragrafi al click cambiare colore al pargrafo
     > **???:** *status*
