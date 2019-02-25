@@ -31,6 +31,7 @@ function resetCalc() {
 }
  
 function addCalc(char) {
+  var firstChar = displayString[0];
   var lastChar = displayString[displayString.length -1];
   switch (char) {
     case '.':
@@ -45,16 +46,24 @@ function addCalc(char) {
     case '-':
     case '*':
     case '/':
+      if (lastChar === '.') displayString += '0';
+      if (lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/') {
+        displayString = displayString.substring(0, (displayString.length -1));
+      }
       dotUsed = false;
     break;
   }
-
   (displayString === '0' || displayString === '-0') ? displayString = char : displayString += char;
+  if (firstChar === '+' || firstChar === '*' || firstChar === '/') displayString = displayString.substring(1, (displayString.length));
   display.value = displayString;
-
 }
 
 function equalsCalc(){
+  var lastChar = displayString[displayString.length -1];
+  if (lastChar === '.') displayString += '0';
+  if (lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/') {
+    displayString = displayString.substring(0, (displayString.length -1));
+  }
   displayString = "" + eval(displayString);
   display.value = displayString;
   displayString = '';
