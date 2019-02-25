@@ -27,6 +27,11 @@
     > **Nicolas:** *la soluzione di Daniele lasciava scoperto un altro bug, ovvero la possibilità di inserire più volte la virgola. Ho rimodificato il tutto, sembra funzionare ma deve essere ulteriormente testato nei casi limite. Ah, ho ingrandito la calcolatrice
     che stavo diventando cieco!*
 
+    > **Daniele** * La calcolatrice presenta errori di calcolo (es 8.6*6=51.59999...4) e
+                   presenta un problema con la virgola usando più volte la somma e/o la
+                   sottrazione (su prodotto e divisione sembra ok); il problema è che
+                   dopo un po di prove non applica più la virgola.
+
 7. Creare una pagina con vari paragrafi al click cambiare colore al pargrafo
     > **???:** *status*
 
