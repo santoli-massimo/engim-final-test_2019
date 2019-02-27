@@ -92,6 +92,7 @@ function addCalc(char) {
 
 function equalsCalc(){
   lastIsEqual = true;
+  dotUsed = false;
   var lastChar = displayString[displayString.length -1];
   if (lastChar === '.') displayString += '0';
   if (lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/') {
