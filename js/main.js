@@ -188,7 +188,7 @@ aggiungi[0].addEventListener('click', function(){
   var cognome=document.forms['persone']['cognome'].value;
   //controllo compilazione campi
   if (nome == "undefined" || nome == "" || cognome == "undefined" || cognome == "")
-  tab.innerHTML='<p>nome e cognome obbligatori</p>';
+    tab.innerHTML='<p>nome e cognome obbligatori</p>';
   //eseguo procedura per inserimento
   else{               
     t=i;    //indice per controlli 
@@ -221,9 +221,47 @@ aggiungi[0].addEventListener('click', function(){
     }
     // informo che la persona è gia inserita
     else 
-    tab.innerHTML='<p>dati gia inseriti</p>';
+      tab.innerHTML='<p>dati gia inseriti</p>';
+    
+    document.forms['persone']['nome'].value = "";
+    document.forms['persone']['cognome'].value = "";
   }
 });
   
-  
+var btdeleteF = document.getElementsByName("DeleteF");
+btdeleteF[0].addEventListener('click', function(){
+  var list = document.getElementById("lista");
+    var figli = list.childNodes;
+    console.log(figli);
+
+    if (list.hasChildNodes()) {
+      list.removeChild(list.childNodes[0]);
+    }
+});
+
+/*
+var btdelete = document.getElementsByName("Delete");
+btdelete[0].addEventListener('click', function(){
+
+  var tab = document.getElementById('lista');
+  var nome = document.forms['persone']['nome'].value;
+  var cognome = document.forms['persone']['cognome'].value;
+
+  if (nome == "undefined" || nome == "" || cognome == "undefined" || cognome == "")
+    tab.innerHTML='<p>nome e cognome obbligatori</p>';
+    //eseguo ricerca nome e cognome per cancellarlo
+  else{
+    var flag = false;
+    var lista = document.querySelectorAll('lista');
+    for(var i=0; i<persone.length; i++) {
+        if(persone[i].Nome == nome && persone[i].CogNome == cognome){
+          lista.removeChild(lista.childNodes[i]);
+          console.log(lista.removeChild(lista.childNodes[i]));
+          console.log(lista.childNodes[i]);
+        }
+    }
+    if(flag)
+      tab.innerHTML='<p>nome e cognome non corrispondono a quelli immessi precedentemente</p>';
+  }
+});*/ 
   
