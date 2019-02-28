@@ -2,42 +2,41 @@
 # GIT Exercises for 2019 engim class
 
 ## Gruppi
-*Scrivete i nomi sotto ai gruppi qui nel readme*
 
-1. Inserire nel subnav a sinistra un orologio: mostrare ora data minuto secondo
-    > **Flavio:** *task completed*
+1. Inserire nel subnav a sinistra un orologio: mostrare [data, ora, minuto e secondo]
+    > **(Flavio):** *Task completed*
 
-2. Inserire main nav un input che faccia ricerca di testo nella pagina e colora i risultati
-    > **Olga [versione locale]:** *done, but it may improve...
-
-    > **Nicolas [versione globale]:** *work in progress*
+2. Inserire in main nav un input che faccia ricerca di testo nella pagina e colora i       risultati
+    > **(Olga, Nicolas):** *Task completed*
 
 3. Creare un tasto back
     > **???:** *status*
 
-4. Creare una pagina con un form con campi nome cognome che crea una nuovo oggetto persona, visualizzare lista delle persone sotto al form (se fatto in gruppo fare anche il rimuovi persona)
-    > **Daniele:** 
-    > **Olga** provato a fare il rimuovi... doesn't work
+4. Creare una pagina con un form con campi [nome, cognome] che crea una nuovo oggetto persona; visualizzare lista delle persone sotto al form (se fatto in gruppo fare anche il rimuovi persona) 
+    > **(Daniele, Olga):** *Task completed*
 
 5. Creare una pagina con una select con i nomi di animali, al select mostrare la foto dell animale sotto alla select
-    > **Mario:** *task completed*
+    > **(Mario):** *Task completed*
 
 6. Creare una pagina con una calcolatrice
-    > **Flavio:** *graphic completed, task 90%*
+    > **(Flavio, Nicolas):** *Task completed*
 
-    > **Nicolas:** *la soluzione di Daniele lasciava scoperto un altro bug, ovvero la possibilità di inserire più volte la virgola. Ho rimodificato il tutto, sembra funzionare ma deve essere ulteriormente testato nei casi limite. Ah, ho ingrandito la calcolatrice
-    che stavo diventando cieco!*
-
+<<<<<<< HEAD
 7. Creare una pagina con vari paragrafi al click cambiare colore al pargrafo
     > **Angelo [Colori random]:** *completo*
 
+=======
+7. Creare una pagina con vari paragrafi al click cambiare colore al paragrafo
+>>>>>>> 58d00543fae4883b3b7ab01405b895f206b4b5a3
     > **???:** *status*
 
 ***
 
 ## Comunicazioni di servizio
-
 *Qui di seguito possiamo scrivere tutto quello che serve per coordinare le varie sezioni del progetto, consigli, bug, ecc.*
+
+- **Per tutti:** seguendo l'esempio di Nicolas, ho diviso alcuni pezzi del main.js in altri file js: btCerca, calc e clock. Direi che si può fare con tutte le task richieste.
+*Flavio*
 
 - **Per tutti:** mi sono permesso di modificare questo file in modo che possiamo usarlo per aggiornare lo stato di avanzamento. Vi prego di aggiornare lo stato di avanzamento e i task che sono ancora orfani se decidete di farli. La formattazione del markdown (il linguaggio usato per questo readme) è abbastanza semplice, ma a beneficio di tutti ho creato dei template sia dei gruppi di task che di messaggio che vi basta copincollare e modificare. *Nicolas*
 
