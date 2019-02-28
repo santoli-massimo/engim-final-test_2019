@@ -116,12 +116,8 @@ function stampa(tab, persone){
       }
     }
   }
-<<<<<<< HEAD
 
   document.forms['persone']['nome'].value = "";
   document.forms['persone']['cognome'].value = "";
 }
 
-=======
-}
->>>>>>> 7f666e68aa40f944b912e42f277c28e9259dabfd
