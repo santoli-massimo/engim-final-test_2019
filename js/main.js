@@ -125,7 +125,7 @@ mainNav.addEventListener('click', function(e){
   
 })
 
-/*------ Cerca Parole in locale ----------*/
+/*------cerca----------*/
 
 var btCerca = document.getElementById('btcerca');
 document.getElementById('write').innerHTML = " ";
@@ -134,15 +134,15 @@ btCerca.addEventListener('click', function(e){
   var parola = document.getElementById('txtcerca').value;
   
   var txt = document.getElementById('txtBacon').textContent;
-
-  if (parola.trim() != ""){
-
+  
+  if (parola != "" || parola != NaN){
+    
     document.getElementById('write').innerHTML = " ";
     
     if(txt.includes(parola)){
       if (parola.includes("-")){
         var parole = txt.split(' ');
-        for(let i=0; i<parole.length; i++){
+        for(var i=0; i<parole.length; i++){
           
           if(parole[i].toLowerCase() == parola){
             parole[i] = '<span style="background-color: brown; color:white;">' + parole[i] + "</span>";
@@ -152,7 +152,7 @@ btCerca.addEventListener('click', function(e){
       } else{
         
         var parole = txt.split(' ');
-        for(let i=0; i<parole.length; i++){
+        for(var i=0; i<parole.length; i++){
           var parolaTemp = parole[i].replace(/(~|`|!|@|#|$|%|^|&|\*|\(|\)|{|}|\[|\]|;|:|\"|'|<|,|\.|>|\?|\/|\\|\||-|_|\+|=)/g, "");
           if(parolaTemp.trim().toLowerCase() == parola){
             if(parole[i].toLowerCase() == parola){
@@ -179,18 +179,15 @@ btCerca.addEventListener('click', function(e){
 
 /*------form aggiungi----------*/
 
-/*------ button Aggiungi ----------*/
-
 var aggiungi = document.getElementsByName("Aggiungi");
 var persone=[];
 var i=0; //indice per aggiungere
-var tab=document.getElementById('lista');
-
 aggiungi[0].addEventListener('click', function(){
+  var tab=document.getElementById('lista');
   var nome=document.forms['persone']['nome'].value;
   var cognome=document.forms['persone']['cognome'].value;
   //controllo compilazione campi
-  if (nome == "undefined" || nome.trim() == "" || cognome == "undefined" || cognome.trim() == "")
+  if (nome == "undefined" || nome == "" || cognome == "undefined" || cognome == "")
     tab.innerHTML='<p>nome e cognome obbligatori</p>';
   //eseguo procedura per inserimento
   else{               
@@ -226,79 +223,48 @@ aggiungi[0].addEventListener('click', function(){
     else 
       tab.innerHTML='<p>dati gia inseriti</p>';
     
+    document.forms['persone']['nome'].value = "";
+    document.forms['persone']['cognome'].value = "";
   }
-  document.forms['persone']['nome'].value = "";
-  document.forms['persone']['cognome'].value = "";
 });
   
-
-/*------ button Delete First ----------*/
-
 var btdeleteF = document.getElementsByName("DeleteF");
 btdeleteF[0].addEventListener('click', function(){
   var list = document.getElementById("lista");
-    
-    if (list.hasChildNodes()) {   
-      persone.splice(persone.length, 1);
-      i--;
-      ricreaLista();
+    var figli = list.childNodes;
+    console.log(figli);
+
+    if (list.hasChildNodes()) {
+      list.removeChild(list.childNodes[0]);
     }
 });
 
-/*------ button Delete con nome passato ----------*/
-
+/*
 var btdelete = document.getElementsByName("Delete");
 btdelete[0].addEventListener('click', function(){
 
+  var tab = document.getElementById('lista');
   var nome = document.forms['persone']['nome'].value;
   var cognome = document.forms['persone']['cognome'].value;
 
-  if (nome == "undefined" || nome.trim() == "" || cognome == "undefined" || cognome.trim() == "")
-
+  if (nome == "undefined" || nome == "" || cognome == "undefined" || cognome == "")
     tab.innerHTML='<p>nome e cognome obbligatori</p>';
     //eseguo ricerca nome e cognome per cancellarlo
   else{
     var flag = false;
-    for(let index=0; index<persone.length; index++) {
-        if(persone[index].Nome == nome && persone[index].CogNome == cognome){
-          persone.splice(index, 1);
-          i--;
-          ricreaLista();
+    var lista = document.querySelectorAll('lista');
+    for(var i=0; i<persone.length; i++) {
+        if(persone[i].Nome == nome && persone[i].CogNome == cognome){
+          lista.removeChild(lista.childNodes[i]);
+          console.log(lista.removeChild(lista.childNodes[i]));
+          console.log(lista.childNodes[i]);
         }
     }
     if(flag)
       tab.innerHTML='<p>nome e cognome non corrispondono a quelli immessi precedentemente</p>';
   }
-}); 
+});*/ 
   
-<<<<<<< HEAD
-function ricreaLista(){
-  if(persone.length == 0)
-  {
-    tab.innerHTML = "";
-  }
-  console.log(persone.length);
-  
-
-  if(persone.length != 0){
-    for(let index=0; index<persone.length; index++){
-      if (index == 0){
-        tab.innerHTML='<ol id="0"><li>'+persone[index].Nome+" "+persone[index].CogNome+'</li></ol>';
-      }
-      else
-      {
-        li=document.createElement('li');
-        lin=document.getElementById('0');
-        lin.appendChild(li);
-        li.innerHTML=persone[index].Nome+' '+persone[index].CogNome;
-      }
-    }
-  }
-
-  document.forms['persone']['nome'].value = "";
-  document.forms['persone']['cognome'].value = "";
-}
-=======
 /*------ZOO------*/
 
 var gabbia = {
@@ -326,4 +292,3 @@ function runsImg(animale){
 }
   
 /*------Fine ZOO------*/
->>>>>>> 9c0c6ae8c308c263f599edc44770f82884159ca6
