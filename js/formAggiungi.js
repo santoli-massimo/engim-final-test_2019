@@ -54,7 +54,7 @@ btdeleteF[0].addEventListener('click', function(){
   var list = document.getElementById("lista");
     
     if (list.hasChildNodes()) {   
-      persone.splice(persone.length-1, 1);
+      persone.splice(0, 1);
       i--;
       ricreaLista();
     }
