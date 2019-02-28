@@ -9,11 +9,12 @@ var i=0; //indice per aggiungere
 var tab=document.getElementById('lista');
 
 aggiungi[0].addEventListener('click', function(){
+  document.getElementById('addF').innerHTML = "";
   var nome=document.forms['persone']['nome'].value;
   var cognome=document.forms['persone']['cognome'].value;
   //controllo compilazione campi
   if (nome == "undefined" || nome.trim() == "" || cognome == "undefined" || cognome.trim() == "")
-  document.getElementById('addF').innerHTML ='nome e cognome obbligatori';
+  document.getElementById('addF').innerHTML = 'nome e cognome obbligatori';
   //eseguo procedura per inserimento
   else{               
     t=i;    //indice per controlli 
@@ -51,6 +52,7 @@ aggiungi[0].addEventListener('click', function(){
 
 var btdeleteF = document.getElementsByName("DeleteF");
 btdeleteF[0].addEventListener('click', function(){
+  document.getElementById('addF').innerHTML = "";
   var list = document.getElementById("lista");
     
     if (list.hasChildNodes()) {   
@@ -64,25 +66,25 @@ btdeleteF[0].addEventListener('click', function(){
 
 var btdelete = document.getElementsByName("Delete");
 btdelete[0].addEventListener('click', function(){
-
+  document.getElementById('addF').innerHTML = "";
   var nome = document.forms['persone']['nome'].value;
   var cognome = document.forms['persone']['cognome'].value;
 
   if (nome == "undefined" || nome.trim() == "" || cognome == "undefined" || cognome.trim() == "")
-
-  document.getElementById('addF').innerHTML == 'nome e cognome obbligatori';
+    document.getElementById('addF').innerHTML = 'nome e cognome obbligatori';
     //eseguo ricerca nome e cognome per cancellarlo
   else{
     var flag = false;
     for(let index=0; index<persone.length; index++) {
         if(persone[index].Nome == nome && persone[index].CogNome == cognome){
           persone.splice(index, 1);
+          flag = true;
           i--;
           ricreaLista();
         }
     }
-    if(flag)
-    document.getElementById('addF').innerHTML =='nome e cognome non corrispondono a quelli immessi precedentemente';
+    if(!flag)
+      document.getElementById('addF').innerHTML = 'nome e cognome non corrispondono a quelli immessi precedentemente';
   }
 }); 
   
