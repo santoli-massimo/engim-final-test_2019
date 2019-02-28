@@ -131,3 +131,21 @@
 }
 
 /*------Fine ZOO------*/
+
+
+/*------MEMORY------*/
+.align{
+    text-align: center
+}
+.inline{
+    display: inline;
+}
+.icon{
+    background-color: green;
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+
+/*------Fine MEMORY------*/
