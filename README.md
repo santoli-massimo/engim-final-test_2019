@@ -13,7 +13,7 @@
     > **Nicolas [versione globale]:** *work in progress*
 
 3. Creare un tasto back
-    > **???:** *status*
+    > **Jimmy:** *in progress*
 
 4. Creare una pagina con un form con campi nome cognome che crea una nuovo oggetto persona, visualizzare lista delle persone sotto al form (se fatto in gruppo fare anche il rimuovi persona)
     > **Daniele:** Aggiungi *done, but it might improve...

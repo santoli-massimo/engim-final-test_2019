@@ -46,6 +46,17 @@
 }
 /*Fine_orologio*/
 
+/*Tasto_back*/
+#back {
+    float: left;
+    border-radius: 6%;
+    background-color: rgb(187, 16, 16);
+}
+
+#back:hover {
+    background-color: rgb(194, 29, 51);
+}
+/*Fine_Tasto_Back*/
 
 .nav {
     background-color: aquamarine;

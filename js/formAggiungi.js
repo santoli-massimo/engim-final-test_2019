@@ -118,3 +118,4 @@ function ricreaLista(){
   document.forms['persone']['nome'].value = "";
   document.forms['persone']['cognome'].value = "";
 }
+
