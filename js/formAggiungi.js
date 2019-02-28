@@ -3,6 +3,7 @@
 /*------ button Aggiungi ----------*/
 
 var aggiungi = document.getElementsByName("Aggiungi");
+document.getElementById('addF').innerHTML = " ";
 var persone=[];
 var i=0; //indice per aggiungere
 var tab=document.getElementById('lista');
@@ -12,7 +13,7 @@ aggiungi[0].addEventListener('click', function(){
   var cognome=document.forms['persone']['cognome'].value;
   //controllo compilazione campi
   if (nome == "undefined" || nome.trim() == "" || cognome == "undefined" || cognome.trim() == "")
-    tab.innerHTML='<p>nome e cognome obbligatori</p>';
+  document.getElementById('addF').innerHTML ='nome e cognome obbligatori';
   //eseguo procedura per inserimento
   else{               
     t=i;    //indice per controlli 
@@ -38,7 +39,7 @@ aggiungi[0].addEventListener('click', function(){
     }
     // informo che la persona è gia inserita
     else 
-      tab.innerHTML='<p>dati gia inseriti</p>';
+    document.getElementById('addF').innerHTML = 'dati gia inseriti';
     
   }
   document.forms['persone']['nome'].value = "";
@@ -69,7 +70,7 @@ btdelete[0].addEventListener('click', function(){
 
   if (nome == "undefined" || nome.trim() == "" || cognome == "undefined" || cognome.trim() == "")
 
-    tab.innerHTML='<p>nome e cognome obbligatori</p>';
+  document.getElementById('addF').innerHTML == 'nome e cognome obbligatori';
     //eseguo ricerca nome e cognome per cancellarlo
   else{
     var flag = false;
@@ -81,7 +82,7 @@ btdelete[0].addEventListener('click', function(){
         }
     }
     if(flag)
-      tab.innerHTML='<p>nome e cognome non corrispondono a quelli immessi precedentemente</p>';
+    document.getElementById('addF').innerHTML =='nome e cognome non corrispondono a quelli immessi precedentemente';
   }
 }); 
   
