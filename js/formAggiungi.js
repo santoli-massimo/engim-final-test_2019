@@ -98,7 +98,6 @@ function ricreaLista(){
     tab.innerHTML = "";
   }
   console.log(persone.length);
-  
 
   if(persone.length != 0){
     for(let index=0; index<persone.length; index++){
@@ -107,14 +106,21 @@ function ricreaLista(){
       }
       else
       {
-        li=document.createElement('li');
-        lin=document.getElementById('0');
-        lin.appendChild(li);
-        li.innerHTML=persone[index].Nome+' '+persone[index].CogNome;
+        aggiungi(index);
       }
     }
   }
 
   document.forms['persone']['nome'].value = "";
   document.forms['persone']['cognome'].value = "";
+}
+
+
+function aggiungi(index){
+
+  li=document.createElement('li');
+  lin=document.getElementById('0');
+  lin.appendChild(li);
+  li.innerHTML=persone[index].Nome+' '+persone[index].CogNome;
+
 }
