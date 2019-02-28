@@ -29,6 +29,8 @@
     che stavo diventando cieco!*
 
 7. Creare una pagina con vari paragrafi al click cambiare colore al pargrafo
+    > **Angelo [Colori random]:** *completo*
+
     > **???:** *status*
 
 ***
