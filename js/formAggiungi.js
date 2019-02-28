@@ -34,14 +34,7 @@ aggiungi[0].addEventListener('click', function(){
       persone[i] = new Persona(nome, cognome);
       i++;
       //creo lista ordinata con nome e cognome persona sotto il form
-      tab.innerHTML='<ol id="0"><li>'+persone[i-1].Nome+" "+persone[i-1].CogNome+'</li></ol>'
-      for(var t=i-1;t>0;t--)
-      {
-        li=document.createElement('li');
-        lin=document.getElementById('0');
-        lin.appendChild(li);
-        li.innerHTML=persone[t-1].Nome+' '+persone[t-1].CogNome;
-      }
+      stampa(tab, persone);
     }
     // informo che la persona è gia inserita
     else 
@@ -60,7 +53,7 @@ btdeleteF[0].addEventListener('click', function(){
   var list = document.getElementById("lista");
     
     if (list.hasChildNodes()) {   
-      persone.splice(persone.length, 1);
+      persone.splice(persone.length-1, 1);
       i--;
       ricreaLista();
     }
@@ -97,8 +90,15 @@ function ricreaLista(){
   {
     tab.innerHTML = "";
   }
-  console.log(persone.length);
 
+  stampa(tab, persone);
+
+  document.forms['persone']['nome'].value = "";
+  document.forms['persone']['cognome'].value = "";
+}
+
+
+function stampa(tab, persone){
   if(persone.length != 0){
     for(let index=0; index<persone.length; index++){
       if (index == 0){
@@ -106,21 +106,11 @@ function ricreaLista(){
       }
       else
       {
-        aggiungi(index);
+        li=document.createElement('li');
+        lin=document.getElementById('0');
+        lin.appendChild(li);
+        li.innerHTML=persone[index].Nome+' '+persone[index].CogNome;
       }
     }
   }
-
-  document.forms['persone']['nome'].value = "";
-  document.forms['persone']['cognome'].value = "";
-}
-
-
-function aggiungi(index){
-
-  li=document.createElement('li');
-  lin=document.getElementById('0');
-  lin.appendChild(li);
-  li.innerHTML=persone[index].Nome+' '+persone[index].CogNome;
-
 }
