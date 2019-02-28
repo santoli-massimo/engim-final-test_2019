@@ -3,16 +3,18 @@
 /*------ button Aggiungi ----------*/
 
 var aggiungi = document.getElementsByName("Aggiungi");
+document.getElementById('addF').innerHTML = " ";
 var persone=[];
 var i=0; //indice per aggiungere
 var tab=document.getElementById('lista');
 
 aggiungi[0].addEventListener('click', function(){
+  document.getElementById('addF').innerHTML = "";
   var nome=document.forms['persone']['nome'].value;
   var cognome=document.forms['persone']['cognome'].value;
   //controllo compilazione campi
   if (nome == "undefined" || nome.trim() == "" || cognome == "undefined" || cognome.trim() == "")
-    tab.innerHTML='<p>nome e cognome obbligatori</p>';
+  document.getElementById('addF').innerHTML = 'nome e cognome obbligatori';
   //eseguo procedura per inserimento
   else{               
     t=i;    //indice per controlli 
@@ -34,18 +36,11 @@ aggiungi[0].addEventListener('click', function(){
       persone[i] = new Persona(nome, cognome);
       i++;
       //creo lista ordinata con nome e cognome persona sotto il form
-      tab.innerHTML='<ol id="0"><li>'+persone[i-1].Nome+" "+persone[i-1].CogNome+'</li></ol>'
-      for(var t=i-1;t>0;t--)
-      {
-        li=document.createElement('li');
-        lin=document.getElementById('0');
-        lin.appendChild(li);
-        li.innerHTML=persone[t-1].Nome+' '+persone[t-1].CogNome;
-      }
+      stampa(tab, persone);
     }
     // informo che la persona è gia inserita
     else 
-      tab.innerHTML='<p>dati gia inseriti</p>';
+    document.getElementById('addF').innerHTML = 'dati gia inseriti';
     
   }
   document.forms['persone']['nome'].value = "";
@@ -57,10 +52,11 @@ aggiungi[0].addEventListener('click', function(){
 
 var btdeleteF = document.getElementsByName("DeleteF");
 btdeleteF[0].addEventListener('click', function(){
+  document.getElementById('addF').innerHTML = "";
   var list = document.getElementById("lista");
     
     if (list.hasChildNodes()) {   
-      persone.splice(persone.length, 1);
+      persone.splice(0, 1);
       i--;
       ricreaLista();
     }
@@ -70,25 +66,25 @@ btdeleteF[0].addEventListener('click', function(){
 
 var btdelete = document.getElementsByName("Delete");
 btdelete[0].addEventListener('click', function(){
-
+  document.getElementById('addF').innerHTML = "";
   var nome = document.forms['persone']['nome'].value;
   var cognome = document.forms['persone']['cognome'].value;
 
   if (nome == "undefined" || nome.trim() == "" || cognome == "undefined" || cognome.trim() == "")
-
-    tab.innerHTML='<p>nome e cognome obbligatori</p>';
+    document.getElementById('addF').innerHTML = 'nome e cognome obbligatori';
     //eseguo ricerca nome e cognome per cancellarlo
   else{
     var flag = false;
     for(let index=0; index<persone.length; index++) {
         if(persone[index].Nome == nome && persone[index].CogNome == cognome){
           persone.splice(index, 1);
+          flag = true;
           i--;
           ricreaLista();
         }
     }
-    if(flag)
-      tab.innerHTML='<p>nome e cognome non corrispondono a quelli immessi precedentemente</p>';
+    if(!flag)
+      document.getElementById('addF').innerHTML = 'nome e cognome non corrispondono a quelli immessi precedentemente';
   }
 }); 
   
@@ -97,9 +93,15 @@ function ricreaLista(){
   {
     tab.innerHTML = "";
   }
-  console.log(persone.length);
-  
 
+  stampa(tab, persone);
+
+  document.forms['persone']['nome'].value = "";
+  document.forms['persone']['cognome'].value = "";
+}
+
+
+function stampa(tab, persone){
   if(persone.length != 0){
     for(let index=0; index<persone.length; index++){
       if (index == 0){
@@ -114,7 +116,4 @@ function ricreaLista(){
       }
     }
   }
-
-  document.forms['persone']['nome'].value = "";
-  document.forms['persone']['cognome'].value = "";
 }
