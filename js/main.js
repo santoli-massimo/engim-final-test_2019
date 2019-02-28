@@ -271,6 +271,7 @@ btdelete[0].addEventListener('click', function(){
   }
 }); 
   
+<<<<<<< HEAD
 function ricreaLista(){
   if(persone.length == 0)
   {
@@ -297,3 +298,32 @@ function ricreaLista(){
   document.forms['persone']['nome'].value = "";
   document.forms['persone']['cognome'].value = "";
 }
+=======
+/*------ZOO------*/
+
+var gabbia = {
+  'Topo': 'La saggezza senza l\'operosità porta alla banalità.',
+  'Bue': 'L\'operosità senza la saggezza porta alla futilità.',
+  'Tigre': 'Il coraggio senza la prudenza porta all\'incoscienza',
+  'Coniglio': 'La prudenza senza il coraggio porta alla codardia.',
+  'Drago': 'La forza senza l\'agilità porta alla rottura.',
+  'Serpente': 'L\'agilità senza la forza porta alla compromissione.',
+  'Cavallo': 'La lungimiranza senza l\'uniformità porta all\'abbandono.',
+  'Capra': 'L\'uniformità senza la lungimiranza porta al ristagno.',
+  'Scimmia': 'La mutabilità senza la costanza porta alla stupidità.',
+  'Gallo': 'La costanza senza la mutabilità porta all\'impacciatezza.',
+  'Cane': 'La fedeltà senza l\'amabilità porta al rifiuto.',
+  'Maiale': 'L\'amabilità senza la fedeltà porta all\'immoralità'
+}
+
+var src = document.getElementById('imgZoo');
+var capture = document.getElementById('capZoo');
+
+
+function runsImg(animale){
+  src.src = "img/zoo/" + animale + ".jpg";
+  capture.textContent = gabbia[animale];
+}
+  
+/*------Fine ZOO------*/
+>>>>>>> 9c0c6ae8c308c263f599edc44770f82884159ca6
