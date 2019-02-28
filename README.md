@@ -25,10 +25,13 @@
     > **Angelo [Colori random]:** *completo*
 
 8. Al click su qualsiasi punto della pagina inserisce una forma (sfera o quadrato) nel punto in cui si è cliccato (opzionale fare un tasto che elimina tutte le forme aggiunte)
+    > **Matteo** 
 
 9. Creare una tabella con un head e 10 o piu righe al click sull head ordina i risultati in base alla colonna
+    > **Luigi**
 
 10. Ogni 5 secondi il colore dell head cambia (opzionale: tasto per start stop )
+    > **Khalil**
 
 11. Form che chiede di indovinare un numero da 1 a 1000 se il numero non è giusto ti dice se il numeor corretto è maggiore o minore di quello inserito. (opzionale il numero da indovinare è casuale)
 
