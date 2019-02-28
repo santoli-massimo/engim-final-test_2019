@@ -161,6 +161,17 @@
 
 
 /*------MEMORY------*/
+#memory{
+    font-size: 30px;
+    text-align: center;
+    margin: 3% auto;
+    border: 3px aquamarine solid;
+    background-color: rgb(29, 194, 139);
+   
+    }
+#memory img:hover {
+    background-image: url("http://amissd.it/images/PITBIKE12/prova.jpg");
+}    
 .align{
     text-align: center
 }
@@ -173,6 +184,13 @@
     width: 150px;
     border-radius: 5px;
 }
-
+.icon:hover{
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 0.8;
+}
+.right{
+    float: right;
+}
 
 /*------Fine MEMORY------*/
