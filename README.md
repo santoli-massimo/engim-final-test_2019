@@ -21,13 +21,9 @@
 6. Creare una pagina con una calcolatrice
     > **(Flavio, Nicolas):** *Task completed*
 
-<<<<<<< HEAD
 7. Creare una pagina con vari paragrafi al click cambiare colore al pargrafo
     > **Angelo [Colori random]:** *completo*
 
-=======
-7. Creare una pagina con vari paragrafi al click cambiare colore al paragrafo
->>>>>>> 58d00543fae4883b3b7ab01405b895f206b4b5a3
     > **???:** *status*
 
 ***
