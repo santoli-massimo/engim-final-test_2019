@@ -47,10 +47,8 @@
 - **Per Olga:** ho implementato un fix nella ricerca globale in modo da non avere confitti con quella locale. Per fare ciò devo fare riferimento a due dei tuoi `id`, che sono `txtBacon` e `txtcerca`. Se hai necessità di modificarli, please tell me!
 *Nicolas*
 
-- **Per Nicolas:**  La calcolatrice presenta errori di calcolo (es 8.6*6=51.59999...4)                      e presenta un problema con la virgola, se si fa una operazione in
-                    cui entrambi i valori sono con virgola nelle operazioni successive
-                    non permette più di usare la virgola (sembra con tutti i tipi di 
-                    operazione).Daniele
+- **Per Nicolas:**  La calcolatrice presenta errori di calcolo (es 8.6*6=51.59999...4)                      e presenta un problema con la virgola, se si fa una operazione in cui entrambi i valori sono con virgola nelle operazioni successive
+non permette più di usare la virgola (sembra con tutti i tipi di operazione). *Daniele* `fixed`
 
 - **Per tutti:** ho testato in vari modi la ricerca globale e mi sembra non ci siano bug e non si spacchi niente, ma se doveste trovare qualche bug vi prego di fare uno screenshot e farmelo avere! Più occhi notano molte più cose! Grazie!
 *Nicolas*
