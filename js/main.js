@@ -187,7 +187,7 @@ aggiungi[0].addEventListener('click', function(){
   var nome=document.forms['persone']['nome'].value;
   var cognome=document.forms['persone']['cognome'].value;
   //controllo compilazione campi
-  if (nome == "undefined" || nome == "" || cognome == "undefined" || cognome == "")
+  if (nome == "undefined" || nome.trim() == "" || cognome == "undefined" || cognome.trim() == "")
     tab.innerHTML='<p>nome e cognome obbligatori</p>';
   //eseguo procedura per inserimento
   else{               
