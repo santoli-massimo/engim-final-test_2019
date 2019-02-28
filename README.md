@@ -19,7 +19,7 @@
     > **Daniele:** *manca il rimuovi*
 
 5. Creare una pagina con una select con i nomi di animali, al select mostrare la foto dell animale sotto alla select
-    > **???:** *status*
+    > **Mario:** *task completed*
 
 6. Creare una pagina con una calcolatrice
     > **Flavio:** *graphic completed, task 90%*

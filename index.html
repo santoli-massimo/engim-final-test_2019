@@ -51,6 +51,9 @@
     <li class="nav-item">
       <a class="nav-link" data-page="page4">Calcolatrice</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" data-page="page5">Lo Zoo</a>
+    </li>
   </ul>
 
   <div id="subnav">
@@ -227,7 +230,36 @@
 
       </form>
           </div> 
-      
+    
+    
+      <div id="page5" class="container Zoo">
+          <h1>L'animale che è in te</h1>
+        <div class="row">
+          <div class="col-lg-3">
+              <div class="btn-group-vertical btn-group-lg" role="group" aria-label="Animals Select">
+                <button type="button" class="btn btn-success" onclick="runsImg('Topo')" >Topo</button>
+                <button type="button" class="btn btn-warning" onclick="runsImg('Bue')">Bue</button>
+                <button type="button" class="btn btn-success" onclick="runsImg('Tigre')">Tigre</button>
+                <button type="button" class="btn btn-warning" onclick="runsImg('Coniglio')">Coniglio</button>
+                <button type="button" class="btn btn-success" onclick="runsImg('Drago')">Drago</button>
+                <button type="button" class="btn btn-warning" onclick="runsImg('Serpente')">Serpente</button>
+                <button type="button" class="btn btn-success" onclick="runsImg('Cavallo')">Cavallo</button>
+                <button type="button" class="btn btn-warning" onclick="runsImg('Capra')">Capra</button>
+                <button type="button" class="btn btn-success" onclick="runsImg('Scimmia')">Scimmia</button>
+                <button type="button" class="btn btn-warning" onclick="runsImg('Gallo')">Gallo</button>
+                <button type="button" class="btn btn-success" onclick="runsImg('Cane')">Cane</button>
+                <button type="button" class="btn btn-warning" onclick="runsImg('Maiale')">Maiale</button>
+              </div>
+          </div>
+          <div class="col-lg-9">
+              <figure class="figure">
+                <img id="imgZoo" src="img/zoo/white.jpg" class="figure-img img-fluid rounded" alt="...">
+                <figcaption id="capZoo" class="figure-caption"></figcaption>
+              </figure>
+          </div>
+        </div>
+      </div>
+     
 
       <div id="lista"></div>
     </div>

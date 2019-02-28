@@ -116,3 +116,18 @@
  }
 
 /* ============= */
+/*------ZOO------*/
+
+.Zoo .row {
+    padding-top: 4%;
+}
+
+.Zoo figure {
+    max-height: 700px;
+}
+
+.Zoo figcaption {
+    font-size: 20Px;
+}
+
+/*------Fine ZOO------*/
