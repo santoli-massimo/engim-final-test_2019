@@ -6,11 +6,11 @@
 1. Inserire nel subnav a sinistra un orologio: mostrare [data, ora, minuto e secondo]
     > **(Flavio):** *Task completed*
 
-2. Inserire in main nav un input che faccia ricerca di testo nella pagina e colora i       risultati
+2. Inserire in main nav un input che faccia ricerca di testo nella pagina e colora i risultati
     > **(Olga, Nicolas):** *Task completed*
 
 3. Creare un tasto back
-    > **???:** *status*
+    > **Jimmy:** *in progress*
 
 4. Creare una pagina con un form con campi [nome, cognome] che crea una nuovo oggetto persona; visualizzare lista delle persone sotto al form (se fatto in gruppo fare anche il rimuovi persona) 
     > **(Daniele, Olga):** *Task completed*
@@ -23,7 +23,18 @@
 
 7. Creare una pagina con vari paragrafi al click cambiare colore al pargrafo
     > **Angelo [Colori random]:** *completo*
-    
+
+8. Al click su qualsiasi punto della pagina inserisce una forma (sfera o quadrato) nel punto in cui si è cliccato (opzionale fare un tasto che elimina tutte le forme aggiunte)
+    > **Matteo** 
+
+9. Creare una tabella con un head e 10 o piu righe al click sull head ordina i risultati in base alla colonna
+    > **Luigi**
+
+10. Ogni 5 secondi il colore dell head cambia (opzionale: tasto per start stop )
+    > **Khalil**
+
+11. Form che chiede di indovinare un numero da 1 a 1000 se il numero non è giusto ti dice se il numeor corretto è maggiore o minore di quello inserito. (opzionale il numero da indovinare è casuale)
+
 
 ## Comunicazioni di servizio
 *Qui di seguito possiamo scrivere tutto quello che serve per coordinare le varie sezioni del progetto, consigli, bug, ecc.*
@@ -36,10 +47,8 @@
 - **Per Olga:** ho implementato un fix nella ricerca globale in modo da non avere confitti con quella locale. Per fare ciò devo fare riferimento a due dei tuoi `id`, che sono `txtBacon` e `txtcerca`. Se hai necessità di modificarli, please tell me!
 *Nicolas*
 
-- **Per Nicolas:**  La calcolatrice presenta errori di calcolo (es 8.6*6=51.59999...4)                      e presenta un problema con la virgola, se si fa una operazione in
-                    cui entrambi i valori sono con virgola nelle operazioni successive
-                    non permette più di usare la virgola (sembra con tutti i tipi di 
-                    operazione).Daniele
+- **Per Nicolas:**  La calcolatrice presenta errori di calcolo (es 8.6*6=51.59999...4)                      e presenta un problema con la virgola, se si fa una operazione in cui entrambi i valori sono con virgola nelle operazioni successive
+non permette più di usare la virgola (sembra con tutti i tipi di operazione). *Daniele* `fixed`
 
 - **Per tutti:** ho testato in vari modi la ricerca globale e mi sembra non ci siano bug e non si spacchi niente, ma se doveste trovare qualche bug vi prego di fare uno screenshot e farmelo avere! Più occhi notano molte più cose! Grazie!
 *Nicolas*
