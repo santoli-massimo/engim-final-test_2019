@@ -117,6 +117,7 @@ function stampa(tab, persone){
     }
   }
 
-
+  document.forms['persone']['nome'].value = "";
+  document.forms['persone']['cognome'].value = "";
 }
 

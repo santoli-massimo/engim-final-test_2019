@@ -183,11 +183,17 @@
     height: 150px;
     width: 150px;
     border-radius: 5px;
+    opacity: 1;    /*cambiato per ora, dovrebbe stare a 0*/
 }
-.icon:hover{
+.icon:active{
     transition-property: opacity;
     transition-duration: 1s;
-    opacity: 0.8;
+    opacity: 1;
+}
+.bg{
+    background-color: aquamarine;
+    border: 1px white solid;
+    border-radius: 5px;
 }
 .right{
     float: right;

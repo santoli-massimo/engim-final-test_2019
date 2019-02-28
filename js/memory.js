@@ -19,7 +19,7 @@ function memoria() {
   for (i = 0; i < 16; i++) {
     a++;
     
-    var res = gabbia[Math.floor(Math.random() * 8)];
+    var res = gabbia[Math.floor(Math.random() * 12)];
 
     var icon = "icon" + a;
     var res1 =
@@ -30,7 +30,7 @@ function memoria() {
     console.log("res1: "+res1);
     console.log("res2: "+res2);
     document.getElementById(icon).innerHTML = res1;
-    document.getElementById(icon).innerHTML = res1;
+    document.getElementById(icon).innerHTML = res2;
   }
 }
 memoria();
