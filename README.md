@@ -8,7 +8,7 @@
     > **Flavio:** *task completed*
 
 2. Inserire main nav un input che faccia ricerca di testo nella pagina e colora i risultati
-    > **Olga [versione locale]:** *done, but it may improve...
+    > **Olga [versione locale]:** *done, but it might improve...
 
     > **Nicolas [versione globale]:** *work in progress*
 
@@ -16,8 +16,8 @@
     > **???:** *status*
 
 4. Creare una pagina con un form con campi nome cognome che crea una nuovo oggetto persona, visualizzare lista delle persone sotto al form (se fatto in gruppo fare anche il rimuovi persona)
-    > **Daniele:** 
-    > **Olga** provato a fare il rimuovi... doesn't work
+    > **Daniele:** Aggiungi *done, but it might improve...
+    > **Olga** Rimuovi *task completed*
 
 5. Creare una pagina con una select con i nomi di animali, al select mostrare la foto dell animale sotto alla select
     > **???:** *status*
