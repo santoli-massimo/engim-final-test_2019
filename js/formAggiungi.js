@@ -2,10 +2,11 @@
 
 /*------ button Aggiungi ----------*/
 
+function form(){
 var aggiungi = document.getElementsByName("Aggiungi");
 document.getElementById('addF').innerHTML = " ";
 var persone=[];
-var i=0; //indice per aggiungere
+let i=0; //indice per aggiungere
 var tab=document.getElementById('lista');
 
 aggiungi[0].addEventListener('click', function(){
@@ -15,16 +16,20 @@ aggiungi[0].addEventListener('click', function(){
   //controllo compilazione campi
   if (nome == "undefined" || nome.trim() == "" || cognome == "undefined" || cognome.trim() == "")
   document.getElementById('addF').innerHTML = 'nome e cognome obbligatori';
+  //controllo presenza caratteri speciali per aggiungi
+  else if(!controllo(nome,cognome)){
+  document.getElementById('addF').innerHTML = 'inserire solo lettere e numeri';
+  }
   //eseguo procedura per inserimento
   else{               
-    t=i;    //indice per controlli 
+    let t=i;    //indice per controlli 
     //controllo se già inserito
     if(i>0){         
       while(t>0){
         if(persone[t-1].Nome != nome || persone[t-1].CogNome != cognome)
         t--;
         else t=-1;            
-      }
+        }
     } 
     //eseguo inserimento se persona non ancora presente
     if(t==0)   
@@ -72,6 +77,10 @@ btdelete[0].addEventListener('click', function(){
 
   if (nome == "undefined" || nome.trim() == "" || cognome == "undefined" || cognome.trim() == "")
     document.getElementById('addF').innerHTML = 'nome e cognome obbligatori';
+    //controllo presenza caratteri speciali per delete con nome passato
+  else if(!controllo(nome,cognome)){
+      document.getElementById('addF').innerHTML = 'inserire solo lettere e numeri';
+    }
     //eseguo ricerca nome e cognome per cancellarlo
   else{
     var flag = false;
@@ -87,7 +96,8 @@ btdelete[0].addEventListener('click', function(){
       document.getElementById('addF').innerHTML = 'nome e cognome non corrispondono a quelli immessi precedentemente';
   }
 }); 
-  
+
+// genero la laista
 function ricreaLista(){
   if(persone.length == 0)
   {
@@ -100,7 +110,7 @@ function ricreaLista(){
   document.forms['persone']['cognome'].value = "";
 }
 
-
+// stampo la lista
 function stampa(tab, persone){
   if(persone.length != 0){
     for(let index=0; index<persone.length; index++){
@@ -116,8 +126,15 @@ function stampa(tab, persone){
       }
     }
   }
-
-  document.forms['persone']['nome'].value = "";
-  document.forms['persone']['cognome'].value = "";
 }
 
+//controllo presenza caratteri speciali
+function controllo(nome,cognome){
+  var nome_pul = nome.replace(/[^A-Za-z0-9]/g, ""); 
+  var cognome_pul = cognome.replace(/[^A-Za-z0-9]/g, "");
+  if(nome==nome_pul && cognome==cognome_pul)
+                 return true;
+  else return false;
+} 
+}
+form();
