@@ -46,6 +46,17 @@
 }
 /*Fine_orologio*/
 
+/*Tasto_back*/
+#back {
+    float: left;
+    border-radius: 6%;
+    background-color: rgb(187, 16, 16);
+}
+
+#back:hover {
+    background-color: rgb(194, 29, 51);
+}
+/*Fine_Tasto_Back*/
 
 .nav {
     background-color: aquamarine;
@@ -115,6 +126,22 @@
      box-shadow: 2px 2px 10px #474747;
  }
 
+ .gs-occurrences {
+     position: relative;
+ }
+
+ .gs-occurrences::after {
+     content: "";
+     display: inline-block;
+     position: absolute;
+     width: 10px;
+     height: 10px;
+     right: 5px;
+     top: 5px;
+     border-radius: 50%;
+     background-image: linear-gradient(to right, #FF8A00, #DA1B60);
+ }
+
 /* ============= */
 /*------ZOO------*/
 
@@ -131,3 +158,45 @@
 }
 
 /*------Fine ZOO------*/
+
+
+/*------MEMORY------*/
+#memory{
+    font-size: 30px;
+    text-align: center;
+    margin: 3% auto;
+    border: 3px aquamarine solid;
+    background-color: rgb(29, 194, 139);
+   
+    }
+#memory img:hover {
+    background-image: url("http://amissd.it/images/PITBIKE12/prova.jpg");
+}    
+.align{
+    text-align: center
+}
+.inline{
+    display: inline;
+}
+.icon{
+    background-color: green;
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    opacity: 1;    /*cambiato per ora, dovrebbe stare a 0*/
+}
+.icon:active{
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 1;
+}
+.bg{
+    background-color: aquamarine;
+    border: 1px white solid;
+    border-radius: 5px;
+}
+.right{
+    float: right;
+}
+
+/*------Fine MEMORY------*/
