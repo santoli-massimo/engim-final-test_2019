@@ -200,3 +200,16 @@
 }
 
 /*------Fine MEMORY------*/
+
+
+/*------ IndoviNumero ------- */
+
+#indovina {
+    background-color: palegreen;
+    margin: 3% auto;
+    border: 3px rgb(143, 248, 130) solid;
+    font-size: 25px;
+    
+}
+
+
