@@ -184,13 +184,20 @@
     height: 150px;
     width: 150px;
     border-radius: 5px;
-    opacity: 1;    /*cambiato per ora, dovrebbe stare a 0*/
+  /*  opacity: 1;    cambiato per ora, dovrebbe stare a 0 */
 }
+/*
 .icon:active{
     transition-property: opacity;
     transition-duration: 1s;
-    opacity: 1;
+    opacity: 0;
+}*/
+.opacity{
+    opacity: 0;
 }
+
+
+
 .bg{
     background-color: aquamarine;
     border: 1px white solid;

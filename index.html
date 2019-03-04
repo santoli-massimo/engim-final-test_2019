@@ -284,7 +284,8 @@
       <h1>Memory test</h1>
       
       <div class="positionMemory">
-        <div class="alert alert-primary" id="displayMemory" onload="displayMemory()">Comincia!</div>
+        <div class="alert alert-primary" id="displayMemory" onclick="displayMemory()">Comincia!</div>
+        <div class="alert alert-primary" id="mirror" onclick="mirror()">Punteggio</div>
         <button type="button" class="btn btn-primary btn-lg " onclick="restart()">Nuova partita</button>
       <form name="memory" method="post">
       </div>
@@ -292,28 +293,28 @@
         <table id="memory"> 
  
         <tr>
-          <td class="bg"><div id="icon1" onload="memoria()" onclick="setTimeout(mirror(),2000)" class="icon"></div></td>
-          <td class="bg"><div id="icon2" onload="memoria()" onclick="mirror()" class="icon"></div></td>
-          <td class="bg"><div id="icon3" onload="memoria()" onclick="mirror()" class="icon"></div></td>
-          <td class="bg"><div id="icon4" onload="memoria()" onclick="mirror()" class="icon"></div></td>
+          <td class="bg"><div id="icon1" class="icon" onload="opacity(this.id)"></div></td>
+          <td class="bg"><div id="icon2" class="icon"></div></td>
+          <td class="bg"><div id="icon3" class="icon"></div></td>
+          <td class="bg"><div id="icon4" class="icon"></div></td>
         </tr>
         <tr>
-          <td class="bg"><div id="icon5" onload="memoria()" class="icon"></div></td>
-          <td class="bg"><div id="icon6" onload="memoria()" class="icon"></div></td>
-          <td class="bg"><div id="icon7" onload="memoria()" class="icon"></div></td>
-          <td class="bg"><div id="icon8" onload="memoria()" class="icon"></div></td>
+          <td class="bg"><div id="icon5" class="icon"></div></td>
+          <td class="bg"><div id="icon6" class="icon"></div></td>
+          <td class="bg"><div id="icon7" class="icon"></div></td>
+          <td class="bg"><div id="icon8" class="icon"></div></td>
         </tr>
         <tr>
-          <td class="bg"><div id="icon9" onload="memoria()" class="icon"></div></td>
-          <td class="bg"><div id="icon10" onload="memoria()" class="icon"></div></td>
-          <td class="bg"><div id="icon11" onload="memoria()" class="icon"></div></td>
-          <td class="bg"><div id="icon12" onload="memoria()" class="icon"></div></td>
+          <td class="bg"><div id="icon9"  class="icon"></div></td>
+          <td class="bg"><div id="icon10" class="icon"></div></td>
+          <td class="bg"><div id="icon11" class="icon"></div></td>
+          <td class="bg"><div id="icon12" class="icon"></div></td>
         </tr>
         <tr>
-          <td class="bg"><div id="icon13" onload="memoria()" class="icon"></div></td>
-          <td class="bg"><div id="icon14" onload="memoria()" class="icon"></div></td>
-          <td class="bg"><div id="icon15" onload="memoria()" class="icon"></div></td>
-          <td class="bg"><div id="icon16" onload="memoria()" class="icon"></div></td>
+          <td class="bg"><div id="icon13" class="icon"></div></td>
+          <td class="bg"><div id="icon14" class="icon"></div></td>
+          <td class="bg"><div id="icon15" class="icon"></div></td>
+          <td class="bg"><div id="icon16" class="icon"></div></td>
           </tr>
      
         </table>
