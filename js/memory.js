@@ -43,30 +43,20 @@ memoria();
 
 function restart() {
   clearInterval(displayMemory);
-  timer = 61;
+  timer = 60;
   displayMemory();
   shuffle();
   document.getElementById("nuova").innerHTML = memoria();
 }
 
-
 function displayMemory() {
-  timer -= 1 ;
+  timer -= 1;
   timer = timer < 10 ? "0" + timer : timer;
-  if (timer <= 0) {
-    document.getElementById("displayMemory").innerHTML = "fine";
-    clearInterval(displayMemory);
-  }
-  else
-  document.getElementById("displayMemory").innerHTML = timer;
+  if (timer <= 0 || isNaN(timer)) {
+    document.getElementById("displayMemory").innerHTML = "Fine";
+  } else document.getElementById("displayMemory").innerHTML = timer;
 }
 notemp = setInterval(displayMemory, 1000);
-
-
-
-
-
-
 
 function mirror() {
   if (history.go(0) === history.go(-1)) {
