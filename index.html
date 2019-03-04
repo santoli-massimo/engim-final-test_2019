@@ -282,19 +282,20 @@
 
     <div id="memory" class="container align">
       <h1>Memory test</h1>
-      <button type="button" class="btn btn-primary btn-lg right" onclick="restart()">Nuova partita</button>
+      
+      <div class="positionMemory">
+        <div class="alert alert-primary" id="displayMemory" onload="displayMemory()">Comincia!</div>
+        <button type="button" class="btn btn-primary btn-lg " onclick="restart()">Nuova partita</button>
       <form name="memory" method="post">
+      </div>
 
         <table id="memory"> 
-            
+ 
         <tr>
-          <td colspan="5"><input type="text" id="risultato" disabled></td>
-        </tr>  
-        <tr>
-          <td class="bg"><div id="icon1" onload="memoria()" class="icon"></div></td>
-          <td class="bg"><div id="icon2" onload="memoria()" class="icon"></div></td>
-          <td class="bg"><div id="icon3" onload="memoria()" class="icon"></div></td>
-          <td class="bg"><div id="icon4" onload="memoria()" class="icon"></div></td>
+          <td class="bg"><div id="icon1" onload="memoria()" onclick="setTimeout(mirror(),2000)" class="icon"></div></td>
+          <td class="bg"><div id="icon2" onload="memoria()" onclick="mirror()" class="icon"></div></td>
+          <td class="bg"><div id="icon3" onload="memoria()" onclick="mirror()" class="icon"></div></td>
+          <td class="bg"><div id="icon4" onload="memoria()" onclick="mirror()" class="icon"></div></td>
         </tr>
         <tr>
           <td class="bg"><div id="icon5" onload="memoria()" class="icon"></div></td>

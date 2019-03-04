@@ -168,6 +168,7 @@
     border: 3px aquamarine solid;
     background-color: rgb(29, 194, 139);
    
+   
     }
 #memory img:hover {
     background-image: url("http://amissd.it/images/PITBIKE12/prova.jpg");
@@ -195,9 +196,11 @@
     border: 1px white solid;
     border-radius: 5px;
 }
-.right{
+.positionMemory {
     float: right;
+    border-radius: 10%;
 }
+
 
 /*------Fine MEMORY------*/
 
