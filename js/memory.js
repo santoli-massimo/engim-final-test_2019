@@ -9,6 +9,7 @@ var gabbia = [
   "Capra",
 ];
 
+var timer;
 var coppie = [];
 
 function coupling(){
@@ -39,11 +40,14 @@ shuffle();
 function memoria() {
   var a = 0;
   var link = "";
+  var final = '';
   for (i = 0; i < coppie.length; i++) {
     a++;
     link = coppie[i].substring(2);
     var icon = "icon" + a;
-    var final = "<img src=img/zoo/" + link + ".jpg onclick=\"mirror(this.id)\" class=\"icon\" id=\"" + coppie[i] + "\">";
+    //console.log('pre' + final);
+    final = "<img src=img/zoo/" + link + ".jpg onclick=\"mirror(this.id)\" class=\"icon\" id=\"" + coppie[i] + "\">";
+    //console.log('post' + final);
     document.getElementById(icon).innerHTML = final;
     console.log(final);
     }
@@ -55,7 +59,8 @@ function restart() {
   timer = 61;
   displayMemory();
   shuffle();
-  document.getElementById("nuova").innerHTML = memoria();
+  memoria();
+  
 }
 
 function displayMemory() {
@@ -76,17 +81,16 @@ function opacity(){
 }
 opacity();
 
-var specchio =[];
+var specchio =[''];
 function mirror(id) {
   var op = document.getElementById(id); 
-  op.style.opacity = "1";
+  op.style.opacity = "1";   //aggiungere un puntatore per l'errore del primo click
   specchio.unshift(id);
   if (specchio[0].substring(2) != null){
       
     if(specchio[0].substring(2) === specchio[1].substring(2)){
           console.log("un punto!!!");
-          specchio.shift();
-          specchio.shift();
+          specchio.shift().shift();
           console.log(specchio);
       }
   
