@@ -69,6 +69,10 @@
       <a class="nav-link" data-page="indovina">IndoviN°</a>
     </li>
 
+    <li>
+      <a class="nav-link" data-page="pageCiprian">Color Picker</a>
+    </li>
+
   </ul>
 
   <div id="subnav">
@@ -291,7 +295,7 @@
       </div>
 
         <table id="memory"> 
- 
+
         <tr>
           <td class="bg"><div id="icon1" class="icon" onload="opacity(this.id)"></div></td>
           <td class="bg"><div id="icon2" class="icon"></div></td>
@@ -320,6 +324,39 @@
         </table>
         
       </form>
+    </div>
+
+    <div class="container" id="pageCiprian"> 
+      <h1>Color Picker</h1>
+      <div class="card">
+        <div class="card-header text-center">
+          <h3>Chose color</h3>
+          <div class="row">
+            <div class="col-sm">
+              <input type="color" id="color-title" oninput="changeTitleColor()"/>
+              <label for="color-title">Title</label>
+            </div>
+            <div class="col-sm">
+              <input type="color" id="color-text" oninput="changeTextColor()"/>
+              <label for="color-text">Text</label>
+            </div>
+            <div class="col-sm">
+              <input type="color" id="color-background" oninput="changeBackgroundColor()"/>
+              <label for="color-background">Background</label>
+            </div>
+          </div>
+        </div>
+        <div class="card-body" id="background">
+          <h3 class="card-title" id="title">Title</h3>
+            <p class="card-text" id="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at mi et risus fringilla posuere sed eu tellus. Praesent nisl felis, varius lacinia magna a, egestas congue nibh. Donec cursus ipsum quam, ut finibus ipsum pharetra ut. Donec consectetur lacus sit amet libero dictum finibus. Vestibulum ut vehicula mi. Praesent consectetur tellus sed est hendrerit, et tincidunt tortor gravida. Nulla blandit id purus eu consectetur. Vestibulum auctor eleifend lorem, et eleifend leo lacinia at. Aliquam facilisis erat quis massa rhoncus aliquet. Pellentesque semper est ac viverra pellentesque. Suspendisse nulla tortor, ullamcorper nec aliquet efficitur, accumsan in mi. Vestibulum posuere viverra ligula ac faucibus. Sed eu tempus odio. Maecenas placerat semper dolor, ac finibus neque tincidunt quis. Vivamus pretium elit sed arcu fringilla, eget gravida ipsum lacinia. Donec tempus felis id dolor condimentum vulputate.
+              Phasellus sed magna nec mauris fermentum facilisis id eget turpis. Fusce sit amet mi sit amet velit ultrices condimentum a ut enim. Curabitur blandit tortor sit amet sollicitudin dapibus. Donec et suscipit est. Vivamus sit amet tempor arcu, eget rhoncus elit. Sed ac augue arcu. Sed vitae rutrum ipsum, eu mattis dui. Curabitur nec tortor ac erat pellentesque egestas. Integer placerat orci quis eleifend aliquam. Sed quis velit nulla.      
+              In suscipit egestas varius. Donec ac faucibus lorem. Morbi ac semper nulla. Praesent dolor augue, imperdiet at feugiat in, imperdiet vel est. Proin tempor vehicula tempus. Donec ac tincidunt sem. Donec tempor porttitor augue et placerat. Donec rutrum cursus lacus, sed mollis neque fermentum sit amet. Vivamus commodo orci vitae tellus lobortis, ut bibendum nisi commodo. Nam mollis augue eu ante commodo, non semper dui cursus. Curabitur in ex vel urna consectetur iaculis at quis enim. Sed tristique libero ut nisi consectetur, sit amet efficitur est fermentum. Donec feugiat ultrices mattis. Nulla facilisi. Integer augue felis, posuere nec diam eget, varius pharetra nisl.      
+              Suspendisse sodales massa sit amet turpis cursus mollis. Praesent ex tellus, fermentum in tincidunt ut, rhoncus nec ipsum. Fusce eu purus vel velit pulvinar vehicula quis nec orci. Integer bibendum pulvinar turpis eu euismod. In condimentum nulla sed turpis blandit gravida. Cras quis ligula eu arcu pellentesque pulvinar in eget elit. Suspendisse dui purus, viverra et orci nec, blandit interdum justo. Aliquam dignissim porttitor dolor, vel maximus dui fermentum quis. Sed tristique enim non lacus tristique, vitae blandit massa luctus. Aenean ut purus elit. Pellentesque id turpis sed risus consequat sodales vitae vel ipsum. Praesent vitae tristique turpis. Sed vitae quam sit amet eros porttitor commodo vitae at lorem. Morbi consectetur fermentum ultricies. Proin aliquet dui et rutrum faucibus. In ac dolor eu tortor vehicula tempor vel quis mi.      
+              Nam lorem ligula, tristique non sapien sit amet, tincidunt laoreet felis. Nam fermentum feugiat urna, ac posuere ligula tristique vel. Phasellus ullamcorper, ante non laoreet bibendum, diam libero maximus odio, ultrices suscipit urna magna eu felis. Nullam in libero eu felis feugiat placerat eget eget dui. Suspendisse rutrum ante non elit condimentum, convallis tincidunt quam pellentesque. Aenean non suscipit lorem, eu dapibus leo. Nulla facilisi. Mauris aliquet felis quis massa bibendum posuere quis eu elit. Fusce in leo mattis, eleifend nulla ac, convallis risus. Pellentesque eu massa non libero convallis condimentum. Quisque rhoncus consequat justo, eu varius nisl tincidunt ac. 
+            </p>
+        </div>
+      </div>
     </div>
 
 
@@ -353,6 +390,7 @@
     <script src="js/global-search.js"></script>
     <script src="js/colorap.js"></script>
     <script src="js/indovina.js"></script>
+    <script src="js/color-picker.js"></script>
 
     
 
