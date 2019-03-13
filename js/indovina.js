@@ -60,8 +60,9 @@ function presentazione(event) {
         cont++;
         
 
-        if(cont > lp.length) {
-            setTimeout(stop_ip, 500);
+        if(cont >= lp.length) {
+            pres.removeChild(pres.childNodes[0]);
+            stop_ip();
         }
         else {
             pres.removeChild(pres.childNodes[0]);
@@ -72,7 +73,6 @@ function presentazione(event) {
 
     function stop_ip() {
         clearInterval(intervalP);
-        //pres.removeChild(pres.childNodes[0]);
         alert("Fine operazioni");
         insert_b();
     }
@@ -83,19 +83,26 @@ function presentazione(event) {
 
 
 function insert_b() {
-    pb = document.createElement("p");
+    var pb = document.createElement("p");
     pb.innerHTML = "<p>Clicca sul pulsante per iniziare!</p>";
-    b = document.createElement("button");
-    b.innerHTML = '<button type="button" >Inizia</button>';
-    b.className = "button_start";
-    b.setAttribute("id", "start");
+    //var b = document.querySelector('#env'); //document.createElement("button");
+    
+    //id = document.createAttribute("id");
+    //id.value = "start";
+    //b.setAttribute(id);
+    
+    env.innerHTML = '<button id="start" class="button_start" type="button" onclick="indovina()" >Inizia</button>';
+    //b.className = "button_start";
+    //b.setAttribute("id", "start");
+
+
     env.appendChild(pb);
     env.appendChild(b);
     
 }
 
 
-function indovina(event) {
+function indovina() {
     alert("entrato in indovina()");
 }
 
