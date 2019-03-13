@@ -235,3 +235,40 @@
 
 
 /*------Fine IndoviNumero------*/
+
+
+/*---------------------
+TABELLA CORSO
+-----------------------*/
+
+.tabellaCorso table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid blue;
+    text-align: center;
+    font-family: Garamond, serif;}
+
+.tabellaCorso th {
+    border: 2px solid blue;
+    background-color: blueviolet;
+    color: aquamarine;
+    font-size: 25px;
+    font-weight: bold;}
+
+.tabellaCorso td {
+    width: 150px;
+    border: 1px solid blue;
+    background-color: aquamarine;
+    color: blueviolet;
+    font-size: 20px;
+    font-style: oblique;}
+
+.tabellaCorso p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*-----------------------
+FINE TABELLA CORSO
+------------------------*/
