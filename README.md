@@ -28,7 +28,7 @@
     > **Matteo** 
 
 9. Creare una tabella con un head e 10 o piu righe al click sull head ordina i risultati in base alla colonna
-    > **Luigi**
+    > **Luigi** *completo*
 
 10. Ogni 5 secondi il colore dell head cambia (opzionale: tasto per start stop )
     > **Khalil**
