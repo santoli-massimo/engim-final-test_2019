@@ -1,3 +1,14 @@
+/*
+
+// ============= NOTE DELL'AUTORE ============= \\
+|| Mi rendo conto che ci siano soluzioni più    || 
+|| eleganti per ottenere gli stessi risultati   ||
+|| di questa "applicazioncina"... Tuttavia ho   ||
+|| voluto fare una "carrellata" di buona parte  ||
+|| delle tematiche affrontate nel corso...      ||
+\\ ============================================ //
+
+*/
 
 // Variabili Utili
 
@@ -12,14 +23,16 @@ var letterN = document.querySelector("#letterN");
 
 var rand = [];
 var rev_rand = [];
+var numbers = [];
+var extr; // conterrà il numero estratto per indoviNumero() 
 
-// popolamento array (per costruzione colori)
+// popolamento array rand e rev_rand (per costruzione colori)
 for(let i = 0; i<=255; i++) {
     rand[i] = i;
     rev_rand[i] = 255 - i;
 }
 
-var rand2 = rand;
+//var rand2 = rand;
 
 // Array contenente elementi utili a presentazione
 var lp = [
@@ -83,27 +96,54 @@ function presentazione(event) {
 
 
 function insert_b() {
-    var pb = document.createElement("p");
-    pb.innerHTML = "<p>Clicca sul pulsante per iniziare!</p>";
+    // var pb = document.createElement("p");
+    //pb.innerHTML = "<p>Clicca sul pulsante per iniziare!</p>";
     //var b = document.querySelector('#env'); //document.createElement("button");
-    
     //id = document.createAttribute("id");
     //id.value = "start";
     //b.setAttribute(id);
-    
-    env.innerHTML = '<button id="start" class="button_start" type="button" onclick="indovina()" >Inizia</button>';
+    env.innerHTML = "";
+    env.innerHTML = `<p>Clicca sul pulsante per iniziare!</p>
+                    <button id="start" class="button_start" 
+                    type="button" onclick="indovinaNumero()">
+                    Inizia</button>`;
     //b.className = "button_start";
-    //b.setAttribute("id", "start");
-
-
-    env.appendChild(pb);
-    env.appendChild(b);
+    //b.setAttribute("id", "start");  
+    //env.appendChild(b);
     
 }
 
 
-function indovina() {
+function indovinaNumero() {
     alert("entrato in indovina()");
+
+    env.innerHTML = ""; // reset del html nel div #env
+
+    var inp = document.createElement("p");
+    var inp2 = document.createElement("p");
+
+    inp.innerHTML = "Sto pensando ad un numero...";
+    inp2.innerHTML = "Credi di riuscire a indovinarlo?";
+
+    env.appendChild(inp);
+    env.appendChild(inp2);
+    //env.removeChild(env.childNodes[0]);
+
+    // popolamento array numbers (per estrazione numero da indovinare)
+    for(let i = 1; i<=1000; i++) {
+        numbers.push(i);
+    }
+
+    shuffle(numbers);
+    extr = numbers.shift();
+    extr2 = numbers.shift();
+
+    console.log(rand);
+    console.log(rev_rand);
+    console.log(numbers);
+    console.log(extr);
+    console.log(extr2);
+
 }
 
 function verifica() {
@@ -159,6 +199,18 @@ function changeColorFaded() {
     
     // Applico il colore al tag span id->letterN
     letterN.style.color = colore_rgb;
+    }
+
+    // funzione che mescola gli elementi dell'array
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
     }
 
     /*
