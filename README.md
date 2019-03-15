@@ -10,7 +10,7 @@
     > **(Olga, Nicolas):** *Task completed*
 
 3. Creare un tasto back
-    > **Jimmy:** *in progress*
+    > **J(immy, Fabrice) :** *in progress*
 
 4. Creare una pagina con un form con campi [nome, cognome] che crea una nuovo oggetto persona; visualizzare lista delle persone sotto al form (se fatto in gruppo fare anche il rimuovi persona) 
     > **(Daniele, Olga):** *Task completed*
