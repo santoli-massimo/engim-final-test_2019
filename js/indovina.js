@@ -17,6 +17,7 @@ var cont = 0; // contatore utile alla funzione presentazione()
 var indovina = document.querySelector("#indovina");
 var pres = document.querySelector("#pres");
 var env = document.querySelector("#env");
+var foot = document.querySelector("#foot");
 var link = document.querySelector("#link2ind");
 var letterN = document.querySelector("#letterN");
 //var start = document.querySelector("#start");
@@ -25,6 +26,8 @@ var rand = [];
 var rev_rand = [];
 var numbers = [];
 var extr; // conterrà il numero estratto per indoviNumero() 
+var active = true; // stato per la funzione fireworks
+var sleep = false; // idem come sopra
 
 // popolamento array rand e rev_rand (per costruzione colori)
 for(let i = 0; i<=255; i++) {
@@ -60,12 +63,22 @@ link.addEventListener("click",presentazione);
 // FUNZIONI
 function presentazione(event) {
 
-    alert("Inizio presentazione");
+    //alert("Inizio presentazione");
+    fireworks(sleep);
+    env.innerHTML = "";
 
     p = document.createElement("p");
     p.className = "pres";
     p.innerHTML = lp[0];
     pres.appendChild(p);
+    
+    foot.innerHTML = `<button id="skip" class="button_start" 
+                    type="button" onclick="stop_ip()">
+                    Salta</button>
+                    <br /><br />
+                    <p>Powered by Fuzzler</p>`;
+
+    foot.appendChild(skip);
 
     intervalP = setInterval(insert_p , 500) // intervallo presentazione
 
@@ -82,18 +95,17 @@ function presentazione(event) {
             p.innerHTML = lp[cont];
             pres.appendChild(p);
         }
-    }
-
-    function stop_ip() {
-        clearInterval(intervalP);
-        alert("Fine operazioni");
-        insert_b();
-    }
-
-    
+    }    
 
 } // fine presentazione()
 
+// interrompe l'esecuzione della presentazione a inserimento frasi <p>
+function stop_ip() {
+    clearInterval(intervalP);
+    pres.innerHTML = "";
+    alert("Fine operazioni");
+    insert_b();
+}
 
 function insert_b() {
     // var pb = document.createElement("p");
@@ -102,7 +114,9 @@ function insert_b() {
     //id = document.createAttribute("id");
     //id.value = "start";
     //b.setAttribute(id);
-    env.innerHTML = "";
+    foot.innerHTML = `<br /><br />
+                        <p>Powered by Fuzzler</p>`;
+    
     env.innerHTML = `<p>Clicca sul pulsante per iniziare!</p>
                     <button id="start" class="button_start" 
                     type="button" onclick="indovinaNumero()">
@@ -115,39 +129,125 @@ function insert_b() {
 
 
 function indovinaNumero() {
-    alert("entrato in indovina()");
+    //alert("entrato in indovina()");
 
     env.innerHTML = ""; // reset del html nel div #env
 
     var inp = document.createElement("p");
     var inp2 = document.createElement("p");
+    var form = document.createElement("form");
+
+    form.name = "fIns";
 
     inp.innerHTML = "Sto pensando ad un numero...";
     inp2.innerHTML = "Credi di riuscire a indovinarlo?";
+    form.innerHTML = '<input id="userIns" type="text" name="num" id="numUtente" />';
+
+    //var nameValue = document.getElementById("uniqueID").value;
 
     env.appendChild(inp);
     env.appendChild(inp2);
+    env.appendChild(form);
     //env.removeChild(env.childNodes[0]);
+    //env.innerHTML = `<br /><form><input type="text" name="num" id="numUtente" /></form>`;
 
     // popolamento array numbers (per estrazione numero da indovinare)
     for(let i = 1; i<=1000; i++) {
         numbers.push(i);
     }
 
+    // estrazione
     shuffle(numbers);
     extr = numbers.shift();
-    extr2 = numbers.shift();
+    extr2 = numbers.pop();
 
     console.log(rand);
     console.log(rev_rand);
     console.log(numbers);
     console.log(extr);
-    console.log(extr2);
+    //console.log(extr2);
+
+    $('#userIns').keypress(function (event) {
+        if (event.keyCode === 10 || event.keyCode === 13) {
+            //var myFieldVal = document.myForm.myField.value;
+            //alert("Il valore inserto nel campo è: "+myFieldVal);
+            event.preventDefault();
+            
+            // mettiamo nella variabile userNum il valore raccolto nel form
+            userNumg = document.fIns.userIns.value;
+            //$("<div>").append( userNum).appendTo( "#env" );
+            verifica();   
+        }
+    });   
 
 }
 
 function verifica() {
-    alert("entrato in verifica()");
+    //alert("entrato in verifica()");
+
+    //env.removeChild(env.childNodes[0]);
+    //env.removeChild(env.childNodes[1]);
+    //env.removeChild(env.childNodes[2]);
+
+    env.innerHTML = ""; // non togliere!!!
+    
+    fireworks(sleep);
+    
+
+    response = document.createElement("p");
+    select = document.createElement("p");
+    errMess = document.createElement("p");
+    selectMenu = document.createElement("div");
+
+    response.innerHTML = "";
+    errMess.innerHTML = "";
+    select.innerHTML = "Vuoi fare un'altro tentativo? O preferisci abbandonare?";
+    errMess.setAttribute("id","errMess");
+    
+    env.innerHTML = "";
+    selectMenu.innerHTML = `<button id="restart" class="button_start" 
+                            type="button" onclick="indovinaNumero()">
+                            Gioca</button>
+                            <button id="quit" class="button_start" 
+                            type="button" onclick="reloadPage()">
+                            Esci</button>`;
+
+
+    userNum = parseInt(userNumg , 10);
+    console.log(typeof(userNum));
+    console.log(userNum);
+     
+    /*
+    if(userNum = "") {
+        errMess.innerHTML = "Devi inserire almeno un numero!!!";
+    }
+    if(userNum <= 0 || userNum > 1000) {
+        errMess.innerHTML = "Il numero deve essere compreso tra 1 e 1000!";
+    }
+    if(userNum == NaN) {
+        errMess.innerHTML = "Devi inserire un numero!!! Nessun altro tipo è accettato!";
+    }    
+    */
+    if(userNum == extr){
+        response.innerHTML = "Congratulazioni!!! Hai indovinato in pieno!";
+        //indovina.fireworks(active);
+    }
+    if(userNum < extr){
+        response.innerHTML = "Peccato! Il numero da te scelto è più piccolo!";        
+    }
+    if(userNum > extr){
+        response.innerHTML = "Peccato! Il numero da te scelto è troppo grande!";
+    }
+
+    env.appendChild(response);
+    env.appendChild(errMess);
+    env.appendChild(select);
+    env.appendChild(selectMenu);
+
+}
+
+function reloadPage() {
+    window.location.reload();
 }
 
 // cambia colore alla lettera N del titolo
@@ -213,6 +313,290 @@ function changeColorFaded() {
         return a;
     }
 
+
+    // NOTA DELL'AUTORE:
+    // *****************
+    // COME AVRETE INTUITO LA SEGUENTE FUNZIONE NON È STATA CREATA DA ME
+    // HO CERCATO DI FARLA FUNZIONARE AL MEGLIO NELL'APPLICAZIONE
+    // CHIEDO VENIA PER LA SFACCIATAGGINE
+    function fireworks(state) {
+
+        if(state) {
+
+            if(!window.JSFX) JSFX=new Object(); 
+            if(!JSFX.createLayer)
+            {/*** Include Library Code ***/
+            
+            var ns4 = document.layers;
+            var ie4 = document.all;
+            JSFX.objNo=0;
+            
+            JSFX.getObjId = function(){return "JSFX_obj" + JSFX.objNo++;};
+            
+            JSFX.createLayer = function(theHtml)
+            {
+            var layerId = JSFX.getObjId();
+            
+            document.write(ns4 ? "<LAYER  NAME='"+layerId+"'>"+theHtml+"</LAYER>" : 
+                        "<DIV id='"+layerId+"' style='position:absolute'>"+theHtml+"</DIV>" );
+            
+            var el =    document.getElementById   ? document.getElementById(layerId) :
+                    document.all       ? document.all[layerId] :
+                                document.layers[layerId];
+            
+            if(ns4)
+                el.style=el;
+            
+            return el;
+            }
+            JSFX.fxLayer = function(theHtml)
+            {
+            if(theHtml == null) return;
+            this.el = JSFX.createLayer(theHtml);
+            }
+            var proto = JSFX.fxLayer.prototype
+            
+            proto.moveTo    = function(x,y){this.el.style.left = x;this.el.style.top=y;}
+            proto.setBgColor = function(color) { this.el.style.backgroundColor = color; } 
+            proto.clip      = function(x1,y1, x2,y2){ this.el.style.clip="rect("+y1+" "+x2+" "+y2+" "+x1+")"; }
+            if(ns4){
+            proto.clip = function(x1,y1, x2,y2){
+                this.el.style.clip.top    =y1;this.el.style.clip.left   =x1;
+                this.el.style.clip.bottom=y2;this.el.style.clip.right   =x2;
+            }
+            proto.setBgColor=function(color) { this.el.bgColor = color; }
+            }
+            if(window.opera)
+            proto.setBgColor = function(color) { this.el.style.color = color==null?'transparent':color; }
+            
+            if(window.innerWidth)
+            {
+            gX=function(){return innerWidth;};
+            gY=function(){return innerHeight;};
+            }
+            else
+            {
+            gX=function(){return document.body.clientWidth;};
+            gY=function(){return document.body.clientHeight;};
+            }
+            
+            /*** Example extend class ***/
+            JSFX.fxLayer2 = function(theHtml)
+            {
+            this.superC = JSFX.fxLayer;
+            this.superC(theHtml + "C");
+            }
+            JSFX.fxLayer2.prototype = new JSFX.fxLayer;
+            }/*** End Library Code ***/
+            
+            /*************************************************/
+            /*** Firework Spark - extends fxLayer ***/
+            JSFX.FireworkSpark = function(x, y)
+            {
+            this.superC = JSFX.fxLayer;
+            this.superC("*");
+            
+            this.dx    = Math.random() * 4 - 2;
+            this.dy   = Math.random() * 4 - 2;
+            this.ay   = .09;
+            this.x   = x;
+            this.y   = y;
+            this.type = 0;
+            }
+            JSFX.FireworkSpark.prototype = new JSFX.fxLayer;
+            /*** END Class FireworkSpark Constructor - start methods ***/
+            
+            JSFX.FireworkSpark.prototype.fire0 = function()
+            {
+            var a = Math.random() * 6.294;
+            var s = Math.random() * 2;
+            if(Math.random() >.6) s = 2;
+            this.dx = s*Math.sin(a);
+            this.dy = s*Math.cos(a) - 2;
+            }
+            JSFX.FireworkSpark.prototype.fire1 = function()
+            {
+            var a = Math.random() * 6.294;
+            var s = Math.random() * 2;
+            this.dx = s*Math.sin(a);
+            this.dy = s*Math.cos(a) - 2;
+            }
+            JSFX.FireworkSpark.prototype.fire2 = function()
+            {
+            var a = Math.random() * 6.294;
+            var s = 2;
+            this.dx = s*Math.sin(a);
+            this.dy = s*Math.cos(a) - 2;
+            }
+            JSFX.FireworkSpark.prototype.fire3 = function()
+            {
+            var a = Math.random() * 6.294;
+            var s = a - Math.random();
+            this.dx = s*Math.sin(a);
+            this.dy = s*Math.cos(a) - 2;
+            }
+            JSFX.FireworkSpark.prototype.fire4 = function()
+            {
+            var a = Math.random() * 6.294;
+            var s = (Math.random() > 0.5) ? 2 : 1;
+            if(s==1)this.setBgColor("#FFFFFF");
+            s -= Math.random()/4;
+            this.dx = s*Math.sin(a);
+            this.dy = s*Math.cos(a) - 2;
+            }
+            JSFX.FireworkSpark.prototype.fire = function(sx, sy, fw, cl)
+            {
+            this.setBgColor(cl);
+            
+            if(fw == 1)
+                this.fire1();
+            else if(fw == 2)
+                this.fire2();
+            else if(fw == 3)
+                this.fire3();
+            else if(fw == 4)
+                this.fire4();
+            else
+                this.fire0();
+            
+            this.x   = sx;
+            this.y   = sy;
+            this.moveTo(sx, sy);
+            }
+            JSFX.FireworkSpark.prototype.animate = function(step)
+            {
+            this.dy += this.ay;
+            this.x += this.dx;
+            this.y += this.dy;
+            this.moveTo(this.x, this.y);
+            }
+            /*** END Class FireworkSpark Methods***/
+            
+            /*** Class Firework extends Object ***/
+            JSFX.Firework = function(numSparks)
+            {
+            window[ this.id = JSFX.getObjId() ] = this;
+            
+            this.sparks = new Array();
+            for(i=0 ; i<numSparks; i++)
+            {
+                this.sparks[i]=new JSFX.FireworkSpark(-10, -10);
+                this.sparks[i].clip(0,0,3,3);
+                this.sparks[i].setBgColor("#00FF00");
+            }
+            this.step = 0;
+            this.timerId = -1;
+            this.x = 0;
+            this.y = 0;
+            this.dx = 0;
+            this.dy = 0;
+            this.ay = 0.2;
+            this.state = "OFF";
+            }
+            JSFX.Firework.prototype.explode = function()
+            {
+            var fw = Math.floor(Math.random() * 5);
+            
+            for(i=0 ; i<this.sparks.length ; i++)
+            {
+                this.sparks[i].fire(this.x, this.y, fw, this.color);
+                this.sparks[i].dx += this.dx;
+                this.sparks[i].dy += this.dy;
+            }
+            }
+            JSFX.Firework.prototype.getMaxDy = function()
+            {
+            var ydiff = gY() - 30;
+            var dy    = 1;
+            var dist  = 0;
+            var ay    = this.ay;
+            while(dist<ydiff)
+            {
+                dist += dy;
+                dy+=ay;
+            }
+            return -dy;
+            }
+            JSFX.Firework.prototype.animate = function()
+            {
+            
+            if(this.state=="OFF")
+            {
+                var colors = new Array("#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FFFFFF");
+                this.color = colors[Math.floor(Math.random()*colors.length)];
+            
+                this.step = 0;
+                this.x = gX()/2;
+                this.y = gY()-10;
+                this.dy = this.getMaxDy();
+                this.dx = Math.random()*-8 + 4;
+                this.dy += Math.random()*3;
+                for(i=0 ; i<this.sparks.length ; i++)
+                    this.sparks[i].moveTo(-10,-10);
+                this.sparks[0].setBgColor(this.color);
+                this.state = "TRAVEL";
+            }
+            else if(this.state=="TRAVEL")
+            {
+                this.x += this.dx;
+                this.y += this.dy;
+                this.dy += this.ay;
+                this.sparks[0].moveTo(this.x,this.y);
+                if(this.dy > 1)
+                {
+                    this.state="EXPLODE"
+                    this.explode();
+                }
+            }
+            else
+            {
+                if(this.step > 40)
+                    this.state="OFF";
+            
+                this.step++;
+            
+                for(i=0 ; i<this.sparks.length ; i++)
+                    this.sparks[i].animate(this.step);
+            }
+            
+            }
+            JSFX.Firework.prototype.start = function()
+            {
+            if(this.timerId == -1)
+            {
+                this.state = "OFF";
+                this.timerId = setInterval("window."+this.id+".animate()", 30);
+            }
+            
+            }
+            JSFX.Firework.prototype.stop = function()
+            {
+            if(this.timerId != -1)
+            {
+                clearInterval(this.timerId);
+                for(i=0 ; i<this.sparks.length ; i++)
+                    this.sparks[i].moveTo(-10,-10);
+                this.timerId = -1;
+                this.step = 0;
+            }
+            }
+            /*** END Class Firework***/
+            
+            JSFX.FWStart = function()
+            {
+            if(JSFX.FWLoad)JSFX.FWLoad();
+            myFW1.start();
+            myFW2.start();
+            }
+            myFW1 = new JSFX.Firework(30);
+            myFW2 = new JSFX.Firework(30);
+            JSFX.FWLoad=window.onload;
+            window.onload=JSFX.FWStart;
+
+        } // fine if *** STATE ***
+
+    } // FINE function FIREWORKS
+
     /*
     function show(id) {
         document.getElementById(id).style.display=”block”;
@@ -222,4 +606,5 @@ function changeColorFaded() {
         document.getElementById(id).style.display=”none”;
     }
     */
+
 
