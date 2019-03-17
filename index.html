@@ -77,6 +77,10 @@
       <a class="nav-link" data-page="pageLuigi">Tabella</a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" data-page="pageMario">8-Digit</a>
+      </li>
+
   </ul>
 
   <div id="subnav">
@@ -158,6 +162,11 @@
     
     <div id="page2" class="container">
       <h1>Form Aggiungi</h1>
+      <label style="color:rgb(12, 69, 88)">Note... <br/> 
+        Inserisci: inserire negli appositi campi il nome e cognome per aggiungerli alla lista.<br/>
+        Premendo Delete First, verrà cancellata dalla lista la prima occorrenza.<br/>
+        Delete: inserire nome e cognome presenti nella lista per eliminare l'occorrenza.<br/><br/>
+      </label>
       <form name="persone" method="post">
         <label>Nome</label>
         <input type="text" name="nome">
@@ -175,6 +184,7 @@
       <h1>Page Cerca</h1>
       <div class="barraCerca">
         <div class="input-group mb-3">
+            <label for="txtcerca">Immetti la parola da cercare e poi premi il bottone</label>
           <input type="text" id="txtcerca" class="form-control" aria-label="Cerca Testo" aria-describedby="basic-addon2">
           <div class="input-group-append">
             <button id="btcerca" class="btn btn-outline-secondary" type="button">Cerca Parola</button>
@@ -182,6 +192,11 @@
         </div>
         <label id="write" style="color:red;">Per favore immetti parola!</label>
       </div>
+      <div class=barraCerca2>
+          <label for="txtcerca2">Immetti caratteri, parole che vuoi cercare</label><br/>
+          <input type="text" id="txtcerca2">
+      </div>
+      <br/>
       <div class="divtesto">
         <p id="txtBacon" style="text-align: justify">Bacon ipsum dolor amet pancetta ham pig tail flank. Strip steak tenderloin turducken pancetta drumstick jowl swine tail pork loin t-bone jerky. Meatloaf filet mignon pork belly sirloin 
           boudin. Pancetta ham hock corned beef filet mignon, picanha flank shank ribeye t-bone ham jerky. Porchetta frankfurter pig leberkas pork chop, filet mignon fatback 
@@ -386,6 +401,188 @@
         </div>
     </div>
 
+      <!-- Inizio 8 Digit -->
+    <div id="pageMario" class="container">
+      <h1>8 Digit custom clock</h1>
+      
+      <div class="clock">
+          <div class="hours">
+      
+            <div class="displayLed" id="houD">
+              <div class="left">
+                <div class="neutro"></div>
+                <div class="led-B"></div>
+                <div class="neutroCen"></div>
+                <div class="led-E"></div>
+                <div class="neutro"></div>
+              </div>
+              <div class="center">
+                <div class="led-A"></div>
+                <div class="neutroInt"></div>
+                <div class="led-D"></div>
+                <div class="neutroInt"></div>
+                <div class="led-G"></div>
+              </div>
+              <div class="right">
+                <div class="neutro"></div>
+                <div class="led-C"></div>
+                <div class="neutroCen"></div>
+                <div class="led-F"></div>
+                <div class="neutro"></div>
+              </div>
+            </div>
+      
+            <div class="displayLed" id="houU">
+              <div class="left">
+                <div class="neutro"></div>
+                <div class="led-B"></div>
+                <div class="neutroCen"></div>
+                <div class="led-E"></div>
+                <div class="neutro"></div>
+              </div>
+              <div class="center">
+                <div class="led-A"></div>
+                <div class="neutroInt"></div>
+                <div class="led-D"></div>
+                <div class="neutroInt"></div>
+                <div class="led-G"></div>
+              </div>
+              <div class="right">
+                <div class="neutro"></div>
+                <div class="led-C"></div>
+                <div class="neutroCen"></div>
+                <div class="led-F"></div>
+                <div class="neutro"></div>
+              </div>
+            </div>
+      
+          </div>
+      
+          <div class="displayDiv">
+              <div class="neutroDiv"></div>
+              <div class="led-Div"></div>
+              <div class="neutroDiv"></div>
+              <div class="led-Div"></div>
+              <div class="neutroDiv"></div>
+            </div>
+      
+          <div class="minutes">
+      
+            <div class="displayLed" id="minD">
+              <div class="left">
+                <div class="neutro"></div>
+                <div class="led-B"></div>
+                <div class="neutroCen"></div>
+                <div class="led-E"></div>
+                <div class="neutro"></div>
+              </div>
+              <div class="center">
+                <div class="led-A"></div>
+                <div class="neutroInt"></div>
+                <div class="led-D"></div>
+                <div class="neutroInt"></div>
+                <div class="led-G"></div>
+              </div>
+              <div class="right">
+                <div class="neutro"></div>
+                <div class="led-C"></div>
+                <div class="neutroCen"></div>
+                <div class="led-F"></div>
+                <div class="neutro"></div>
+              </div>
+            </div>
+      
+            <div class="displayLed" id="minU">
+              <div class="left">
+                <div class="neutro"></div>
+                <div class="led-B"></div>
+                <div class="neutroCen"></div>
+                <div class="led-E"></div>
+                <div class="neutro"></div>
+              </div>
+              <div class="center">
+                <div class="led-A"></div>
+                <div class="neutroInt"></div>
+                <div class="led-D"></div>
+                <div class="neutroInt"></div>
+                <div class="led-G"></div>
+              </div>
+              <div class="right">
+                <div class="neutro"></div>
+                <div class="led-C"></div>
+                <div class="neutroCen"></div>
+                <div class="led-F"></div>
+                <div class="neutro"></div>
+              </div>
+            </div>
+      
+          </div>
+      
+          <div class="displayDiv">
+            <div class="neutroDiv"></div>
+            <div class="led-Div"></div>
+            <div class="neutroDiv"></div>
+            <div class="led-Div"></div>
+            <div class="neutroDiv"></div>
+          </div>
+      
+          <div class="seconds">
+      
+            <div class="displayLed" id="secD">
+              <div class="left">
+                <div class="neutro"></div>
+                <div class="led-B"></div>
+                <div class="neutroCen"></div>
+                <div class="led-E"></div>
+                <div class="neutro"></div>
+              </div>
+              <div class="center">
+                <div class="led-A"></div>
+                <div class="neutroInt"></div>
+                <div class="led-D"></div>
+                <div class="neutroInt"></div>
+                <div class="led-G"></div>
+              </div>
+              <div class="right">
+                <div class="neutro"></div>
+                <div class="led-C"></div>
+                <div class="neutroCen"></div>
+                <div class="led-F"></div>
+                <div class="neutro"></div>
+              </div>
+            </div>
+      
+            <div class="displayLed" id="secU">
+              <div class="left">
+                <div class="neutro"></div>
+                <div class="led-B"></div>
+                <div class="neutroCen"></div>
+                <div class="led-E"></div>
+                <div class="neutro"></div>
+              </div>
+              <div class="center">
+                <div class="led-A"></div>
+                <div class="neutroInt"></div>
+                <div class="led-D"></div>
+                <div class="neutroInt"></div>
+                <div class="led-G"></div>
+              </div>
+              <div class="right">
+                <div class="neutro"></div>
+                <div class="led-C"></div>
+                <div class="neutroCen"></div>
+                <div class="led-F"></div>
+                <div class="neutro"></div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+        <!-- fine 8 Digit -->
+      
+
+    </div>
+
   </div> <!-- DIV Esterno -->
 
 
@@ -407,6 +604,7 @@
     <script src="js/indovina.js"></script>
     <script src="js/color-picker.js"></script>
     <script src="js/tabella_corso_git.js"></script>
+    <script src="js/8digit.js"></script>
 
     
 
