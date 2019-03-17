@@ -45,14 +45,15 @@ var lp = [
     "E che ne so! ...",
     "Una su un milione? ",
     "Una su un miliardo? ",
-    "Una su un Ipermegalone?"
+    "Una su un Ipermegalone?",
+    "Staremo a vedere....Let's GO!"
 ];
 
-// Array contenente elementi utili a presentazione
-var lt = [500,4500,5500,4500,3500,3500,3500];
+// Array contenente tempi utili per la presentazione
+var lt = [500,4500,5500,4500,3500,3500,3500,3500];
 
 // Cambia colore alla lettera N
-cc_interval = setInterval(changeColor, 399);
+cc2n_interv = setInterval(changeColor, 399);
 //timeoutCCF = setTimeout(changeColorFaded,130);
 
 // LISTENER 
@@ -72,13 +73,14 @@ function presentazione(event) {
     p.innerHTML = lp[0];
     pres.appendChild(p);
     
-    foot.innerHTML = `<button id="skip" class="button_start" 
+    foot.innerHTML = `<p> (Clicca per saltare la presentazione) </p>
+                    <button id="skip" class="button_start" 
                     type="button" onclick="stop_ip()">
                     Salta</button>
                     <br /><br />
                     <p>Powered by Fuzzler</p>`;
 
-    foot.appendChild(skip);
+    //foot.appendChild(skip);
 
     intervalP = setInterval(insert_p , 500) // intervallo presentazione
 
@@ -103,10 +105,11 @@ function presentazione(event) {
 function stop_ip() {
     clearInterval(intervalP);
     pres.innerHTML = "";
-    alert("Fine operazioni");
-    insert_b();
+    //alert("Fine presentazione");
+    indovinaNumero();
 }
 
+// DEPRECATA DA CANCELLARE!!!
 function insert_b() {
     // var pb = document.createElement("p");
     //pb.innerHTML = "<p>Clicca sul pulsante per iniziare!</p>";
@@ -130,6 +133,7 @@ function insert_b() {
 
 function indovinaNumero() {
     //alert("entrato in indovina()");
+    foot.innerHTML = `<br /><br /><p>Powered by Fuzzler</p>`;
 
     env.innerHTML = ""; // reset del html nel div #env
 
@@ -141,7 +145,7 @@ function indovinaNumero() {
 
     inp.innerHTML = "Sto pensando ad un numero...";
     inp2.innerHTML = "Credi di riuscire a indovinarlo?";
-    form.innerHTML = '<input id="userIns" type="text" name="num" id="numUtente" />';
+    form.innerHTML = '<input id="userIns" type="text" />';
 
     //var nameValue = document.getElementById("uniqueID").value;
 
@@ -174,7 +178,7 @@ function indovinaNumero() {
             event.preventDefault();
             
             // mettiamo nella variabile userNum il valore raccolto nel form
-            userNumg = document.fIns.userIns.value;
+            userNum = document.fIns.userIns.value;
             //$("<div>").append( userNum).appendTo( "#env" );
             verifica();   
         }
@@ -199,10 +203,13 @@ function verifica() {
     errMess = document.createElement("p");
     selectMenu = document.createElement("div");
 
+    errMess.setAttribute("id","errMess");
+
     response.innerHTML = "";
     errMess.innerHTML = "";
     select.innerHTML = "Vuoi fare un'altro tentativo? O preferisci abbandonare?";
-    errMess.setAttribute("id","errMess");
+
+    
     
     env.innerHTML = "";
     selectMenu.innerHTML = `<button id="restart" class="button_start" 
@@ -213,31 +220,43 @@ function verifica() {
                             Esci</button>`;
 
 
-    userNum = parseInt(userNumg , 10);
-    console.log(typeof(userNum));
-    console.log(userNum);
-     
-    /*
-    if(userNum = "") {
-        errMess.innerHTML = "Devi inserire almeno un numero!!!";
+    //console.log("Tipo UserNum prima parseInt: "+typeof(userNumg));
+    //console.log("Valore UserNum prima parseInt: "+userNumg);
+    if(userNum == "")
+        userNum = 0;
+    else if(isNaN(userNum))
+        userNum = 'letter';
+    else
+        userNum = parseInt(userNum , 10);
+
+
+    //userNum = parseInt(userNumg , 10);
+    console.log("Tipo UserNum dopo parseInt: "+typeof(userNum));
+    console.log("Valore UserNum dopo parseInt: "+userNum);
+    //ctrl = "";
+    
+    if(userNum == 'letter') {
+        errMess.innerHTML = "Devi inserire un numero!!! Nessun altro carattere è accettato!";
     }
-    if(userNum <= 0 || userNum > 1000) {
+    else if(userNum == ("") || userNum == 0) {
+        errMess.innerHTML = "Non puoi lasciare il campo vuoto...che cazzo!!!";
+    }
+    else if(userNum < 0 || userNum > 1000) {
         errMess.innerHTML = "Il numero deve essere compreso tra 1 e 1000!";
-    }
-    if(userNum == NaN) {
-        errMess.innerHTML = "Devi inserire un numero!!! Nessun altro tipo è accettato!";
-    }    
-    */
-    if(userNum == extr){
+    }  
+    else if(userNum == extr){
         response.innerHTML = "Congratulazioni!!! Hai indovinato in pieno!";
         //indovina.fireworks(active);
     }
-    if(userNum < extr){
+    else if(userNum < extr){
         response.innerHTML = "Peccato! Il numero da te scelto è più piccolo!";        
     }
-    if(userNum > extr){
+    else if(userNum > extr){
         response.innerHTML = "Peccato! Il numero da te scelto è troppo grande!";
     }
+    else
+        response.innerHTML = "Mi hanno trovato...non so come ma mi hanno trovato...Scappa Marty!!!";
+        
 
     env.appendChild(response);
     env.appendChild(errMess);

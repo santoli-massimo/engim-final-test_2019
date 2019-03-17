@@ -219,7 +219,20 @@
     margin: 3% auto;
     border: 3px rgb(143, 248, 130) solid;
     font-size: 25px;
+    text-align: center;
     
+}
+
+#indovina p {
+    text-align: center;
+}
+ 
+#env p {
+    text-align: center;
+}
+
+#env p #errMess{
+    text-align: center;
 }
 
 .button_start {
@@ -233,20 +246,24 @@
 }
 
 #userIns {
-    width: 100px;
-    height: 40px;
+    width: 150px;
+    height: 50px;
     font-size: 37px;
     text-align: right;
     background-color: beige;
 }
 
-#errMess {
-    width: 750px;
+#errMess {   
+    width: 850px;
     font-size: 27px;
     font-weight: bolder;
     text-decoration: underline;
     color: red;
     background-color: yellow;
+    text-align: center;
+    clear: both;
+    margin: auto;
+    margin-left: auto;
 }
 
 
