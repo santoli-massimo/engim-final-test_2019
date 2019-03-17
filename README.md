@@ -36,7 +36,7 @@
 11. Form che chiede di indovinare un numero da 1 a 1000 se il numero non è giusto ti dice se il numeor corretto è maggiore o minore di quello inserito. (opzionale il numero da indovinare è casuale)
     > **Fabrizio** I'm almost on it ...
 
-12. Variante di orologio. Visualizzazione dell'ora mediante un display a 7 segmenti.
+12. Variante di orologio. Visualizzazione dell'ora mediante display a 7 segmenti.
     > **(Mario):** *Task completed*
 
 ## Comunicazioni di servizio
