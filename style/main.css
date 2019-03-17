@@ -219,12 +219,15 @@
     margin: 3% auto;
     border: 3px rgb(143, 248, 130) solid;
     font-size: 25px;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 #indovina p {
     text-align: center;
+}
+
+#indovina h1 {
+    margin-top: 10px;
 }
  
 #env p {
@@ -233,6 +236,13 @@
 
 #env p #errMess{
     text-align: center;
+}
+
+#letterN {
+    font-size: 60px; 
+    font-weight: bolder; 
+    text-shadow: 2px 2px 3px black;
+
 }
 
 .button_start {
@@ -264,6 +274,21 @@
     clear: both;
     margin: auto;
     margin-left: auto;
+}
+
+
+#winMess {   
+    width: 850px;
+    height: 80px;
+    font-size: 40px;
+    font-weight: bolder;
+    text-decoration: underline;
+    color:white;
+    text-align: center;
+    clear: both;
+    margin: auto;
+    margin-left: auto;
+    text-shadow: 2px 2px 2px red;
 }
 
 

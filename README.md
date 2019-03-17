@@ -34,7 +34,7 @@
     > **Khalil**
 
 11. Form che chiede di indovinare un numero da 1 a 1000 se il numero non è giusto ti dice se il numeor corretto è maggiore o minore di quello inserito. (opzionale il numero da indovinare è casuale)
-    > **Fabrizio** I'm almost on it ...
+    > **Fabrizio** *FINISHED* (Non sono riuscito a perfezionare alcuni effetti grafici...ci riproverò in seguito se sarà possibile...)
 
 ## Comunicazioni di servizio
 *Qui di seguito possiamo scrivere tutto quello che serve per coordinare le varie sezioni del progetto, consigli, bug, ecc.*
