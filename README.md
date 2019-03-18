@@ -41,6 +41,9 @@
 12. Variante di orologio. Visualizzazione dell'ora mediante display a 7 segmenti.
     > **(Mario):** *Task completed*
 
+13. Creazione di un form tramite JS, con campi obbligatori.
+    > **(Andrea):** *Task completed*
+
 ## Comunicazioni di servizio
 *Qui di seguito possiamo scrivere tutto quello che serve per coordinare le varie sezioni del progetto, consigli, bug, ecc.*
 

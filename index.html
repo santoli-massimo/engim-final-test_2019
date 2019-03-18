@@ -94,6 +94,10 @@
       <a class="nav-link" data-page="pageKhalil">Head Color</a>
    </li>
 
+   <li class="nav_item">
+    <a class="nav-link" data-page="worldform">Word Form</a>
+ </li>
+
   </ul>
 
   <div id="subnav">
@@ -654,28 +658,117 @@
     </form>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script> <!-- indoviNumero -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- indoviNumero -->
-    <script src="js/main.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/calc.js"></script>
-    <script src="js/btCerca.js"></script>
-    <script src="js/memory.js"></script> 
-    <script src="js/formAggiungi.js"></script>
-    <script src="js/global-search.js"></script>
-    <script src="js/colorap.js"></script>
-    <script src="js/indovina.js"></script>
-    <script src="js/color-picker.js"></script>
-    <script src="js/tabella_corso_git.js"></script>
-    <script src="js/8digit.js"></script>
-    <script src="js/square_circle.js"></script>
-    <script src="js/parrafosCol.js"></script>
-    <script src="js/color-head.js"></script>
+    <!-- Inizio Word Form -->
 
-    
+    <div id="wordform" class="container cal">
+      <h1>Word Form</h1>
+      <form action="" method="post" name="registr" >
+        Cognome*
+        <br />
+        <input type="text" id="cognomeAndrea" name="cognome" size="40" maxlength="40" >
+        <br /><br />
+        Nome*
+        <br />
+        <input type="text" id="nomeAndrea" name="nomeAndrea" size="30" maxlength="30" >
+        <br><br />
+        Matricola* <br />
+        <input type="text" id="matricolaAndrea" name="matricolaAndrea" size="15" maxlength="15" required>
+        <br /><br />
+        Paese di origine* <br />
+        <select name="paese" required>
+        <option value="nessuna" selected></option>
+        <option value="albania">Albania</option>
+        <option value="argentina">Argentina</option>
+        <option value="austria">Austria</option>
+        <option value="belgio">Belgio</option>
+        <option value="brasile">Brasile</option>
+        <option value="bulgeria">Bulgaria</option>
+        <option value="camerun">Camerun</option>
+        <option value="canada">Canada</option>
+        <option value="cile">Cile</option>
+        <option value="cina">Cina</option>
+        <option value="costa rica">Costa Rica</option>
+        <option value="danimarca">Danimarca</option>
+        <option value="equador">Equador</option>
+        <option value="egitto">Egitto</option>
+        <option value="francia">Francia</option>
+        <option value="grecia">Grecia</option>
+        <option value="germania">Germania</option>
+        <option value="ghana">Ghana</option>
+        <option value="giappone">Giappone</option>
+        <option value="india">India</option>
+        <option value="italia">Italia</option>
+        <option value="iran">Iran</option>
+        <option value="israele">Israele</option>
+        <option value="irlanda">Irlanda</option>
+        <option value="libia">Libia</option>
+        <option value="lettonia">Lettonia</option>
+        <option value="libano">Libano</option>
+        <option value="macedonia">Macedonia</option>
+        <option value="marocco">Marocco</option>
+        <option value="moldavia">Moldavia</option>
+        <option value="nigeria">Nigeria</option>
+        <option value="norvegia">Norvegia</option>
+        <option value="paraguay">Paraguay</option>
+        <option value="pakistan">Pakistan</option>
+        <option value="peru">Peru</option>
+        <option value="polonia">Polonia</option>
+        <option value="portogallo">Portogallo</option>
+        <option value="regno unito">Regno Unito</option>
+        <option value="romania">Romania</option>
+        <option value="russia">Russia</option>
+        <option value="slovenia">Slovenia</option>
+        <option value="siria">Siria</option>
+        <option value="spagna">Spagna</option>
+        <option value="stati uniti">Stati Uniti</option>
+        <option value="senegal">Senegal</option>
+        <option value="serbia">Serbia</option>
+        <option value="svizzera">Svizzera</option>
+        <option value="tunisia">Tunisia</option>
+        <option value="turchia">Turchia</option>
+        <option value="ucraina">Ucraina</option>
+        <option value="ungheria">Ungheria</option>
+        <option value="uruguay">Uruguay</option>
+        <option value="venezuela">Venezuela</option>
+        </select>
+        <br /><br />
+        Email* <br />
+        <input id="emailAndrea" type="text" name="email" size="30" maxlength="30" required>
+        <br /><br />
+        Telefono* <br />
+        <input id="telefonoAndrea" type="text" name="tel" size="15" maxlength="15" required>
+        <br /><br />
+        Richieste Particolari
+        <br />
+        <textarea name="richieste" cols="60" rows="12"></textarea>
+        <br /><br />
+        <input type="submit" value="Invia" id="btAndreaInvia">
+        <input type="reset" value="Reset" id="btAndreaReset">
+        </form>
+          </div> 
+
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+          <script src="https://code.jquery.com/jquery-1.10.2.js"></script> <!-- indoviNumero -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- indoviNumero -->
+          <script src="js/main.js"></script>
+          <script src="js/clock.js"></script>
+          <script src="js/calc.js"></script>
+          <script src="js/btCerca.js"></script>
+          <script src="js/memory.js"></script> 
+          <script src="js/formAggiungi.js"></script>
+          <script src="js/global-search.js"></script>
+          <script src="js/colorap.js"></script>
+          <script src="js/indovina.js"></script>
+          <script src="js/color-picker.js"></script>
+          <script src="js/tabella_corso_git.js"></script>
+          <script src="js/8digit.js"></script>
+          <script src="js/square_circle.js"></script>
+          <script src="js/parrafosCol.js"></script>
+          <script src="js/color-head.js"></script>
+          <script src="js/wordform.js"></script>
+
 
   </body>
 </html>
