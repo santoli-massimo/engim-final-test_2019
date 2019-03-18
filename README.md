@@ -25,7 +25,7 @@
     > **Angelo [Colori random]:** *completo*
 
 8. Al click su qualsiasi punto della pagina inserisce una forma (sfera o quadrato) nel punto in cui si è cliccato (opzionale fare un tasto che elimina tutte le forme aggiunte)
-    > **Matteo** 
+    > **Matteo** *completo*
 
 9. Creare una tabella con un head e 10 o piu righe al click sull head ordina i risultati in base alla colonna
     > **Luigi** *completo*

@@ -81,6 +81,10 @@
         <a class="nav-link" data-page="pageMario">8-Digit</a>
       </li>
 
+    <li class="nav-item">
+        <a class="nav-link" data-page="pageMatteo" onclick="resetArr(); return false;">Quadrati & Cerchi</a>
+    </li>
+
   </ul>
 
   <div id="subnav">
@@ -579,10 +583,23 @@
       
           </div>
         </div>
-        <!-- fine 8 Digit -->
+       
       
 
+
+    </div>  <!-- fine 8 Digit -->
+
+    <!--Inizio Quadrati & Cerchi -->
+
+    <div id="pageMatteo" class="container">
+      <h1>Quadrati & Cerchi</h1>
+      <h4 id="istrCanvas">Clicca nell'area per creare un quadrato - Usa lo scroll per creare un cerchio  <button type="button" class="btn btn-warning" onclick="resetArr()" id="resButtonCanvas">Reset</button></h4>
+
+      <div id="areaCanvas">
+        <canvas></canvas>
+      </div>
     </div>
+    <!--Fine Quadrati & Cerchi-->
 
   </div> <!-- DIV Esterno -->
 
@@ -606,6 +623,7 @@
     <script src="js/color-picker.js"></script>
     <script src="js/tabella_corso_git.js"></script>
     <script src="js/8digit.js"></script>
+    <script src="js/square_circle.js"></script>
 
     
 
