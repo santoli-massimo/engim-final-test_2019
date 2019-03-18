@@ -175,9 +175,9 @@ function indovinaNumero() {
 
     env.innerHTML = ""; // reset del html nel div #env
 
-    var inp = document.createElement("p");
-    var inp2 = document.createElement("p");
-    var form = document.createElement("form");
+    inp = document.createElement("p");
+    inp2 = document.createElement("p");
+    form = document.createElement("form");
 
     form.name = "fIns";
 
@@ -218,6 +218,50 @@ function indovinaNumero() {
         }
     });   
 
+} // fine indovinaNumero(
+
+
+
+function indovinaNumeroBis() {
+    //alert("entrato in indovinaNumeroBis()");
+
+    foot.innerHTML = `<br /><br /><p>Powered by Fuzzler</p>`;
+
+    env.innerHTML = ""; // reset del html nel div #env
+
+    //var inp = document.createElement("p");
+    inp3 = document.createElement("p");
+    //var form = document.createElement("form");
+
+    form.name = "fIns";
+
+    //inp.innerHTML = "Sto pensando ad un numero...";
+    inp3.innerHTML = "Prova di nuovo a indovinare il numero a cui ho pensato...<br />";
+    //form.innerHTML = '<input id="userIns" type="text" />';
+
+    //env.appendChild(inp);
+    env.appendChild(inp3);
+    env.appendChild(form);
+    
+    
+    
+    // Stampa del numero estratto (per verificare il corretto funzionamento)
+    console.log("Numero GIÀ estratto (no new): "+extr);
+    //console.log(extr2);
+
+    $('#userIns').keypress(function (event) {
+        //alert("entrato in eventPrevent()");
+        if (event.keyCode === 10 || event.keyCode === 13) {
+            // EVENT PREVENT (impedisce alla pagina di ricaricarsi)
+            event.preventDefault();
+            
+            // mettiamo nella variabile userNum il valore raccolto nel form
+            userNum = document.fIns.userIns.value;
+            //$("<div>").append( userNum).appendTo( "#env" ); // incolonna i numeri estratti nel div
+            verifica();   
+        }
+    });   
+
 }
 
 function verifica() {
@@ -226,6 +270,7 @@ function verifica() {
     env.innerHTML = ""; // non togliere!!!
 
     //fireworks(sleep); // non implementata
+    console.log("Input (raw) dell'utente: "+userNum);
     
     response = document.createElement("p");
     errMess = document.createElement("p");
@@ -242,10 +287,14 @@ function verifica() {
     winner.innerHTML = "";
     
     env.innerHTML = "";
-    selectMenu.innerHTML = `<br /><p>Vuoi fare un'altro tentativo? O preferisci abbandonare?</p>
+    selectMenu.innerHTML = `<br /><p>Vuoi fare un'altro tentativo? 
+                            Vuoi un nuovo numero? O preferisci abbandonare?</p>
+                            <button id="retry" class="button_start" 
+                            type="button" onclick="indovinaNumeroBis()">
+                            Riprova</button>
                             <button id="restart" class="button_start" 
                             type="button" onclick="indovinaNumero()">
-                            Gioca</button>
+                            Nuovo</button>
                             <button id="quit" class="button_start" 
                             type="button" onclick="reloadPage()">
                             Esci</button>`;
