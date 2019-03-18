@@ -11,6 +11,7 @@
 
 3. Creare un tasto back
     > **(Jimmy [in alto]) :** *in progress*
+    
     > **(Fabrice [in basso]) :** *completo*
 
 4. Creare una pagina con un form con campi [nome, cognome] che crea una nuovo oggetto persona; visualizzare lista delle persone sotto al form (se fatto in gruppo fare anche il rimuovi persona) 
@@ -24,6 +25,7 @@
 
 7. Creare una pagina con vari paragrafi al click cambiare colore al pargrafo
     > **Angelo [Colori random]:** *completo*
+
     > **Falon [Su hover]** *completo*
 
 8. Al click su qualsiasi punto della pagina inserisce una forma (sfera o quadrato) nel punto in cui si è cliccato (opzionale fare un tasto che elimina tutte le forme aggiunte)
