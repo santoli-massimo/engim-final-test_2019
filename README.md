@@ -23,6 +23,7 @@
 
 7. Creare una pagina con vari paragrafi al click cambiare colore al pargrafo
     > **Angelo [Colori random]:** *completo*
+    > **Falon [Su hover]** *completo*
 
 8. Al click su qualsiasi punto della pagina inserisce una forma (sfera o quadrato) nel punto in cui si è cliccato (opzionale fare un tasto che elimina tutte le forme aggiunte)
     > **Matteo** *completo*
