@@ -48,6 +48,9 @@ btCerca.addEventListener('click', function(e){
       document.getElementById('txtBacon').innerHTML = txt;
       document.getElementById('write').textContent = "Parola " + world + " non è stata trovata.";
     }
+  }else{
+    document.getElementById('txtBacon').innerHTML = txt;
+    document.getElementById('write').textContent = "Parola " + world + " non è stata trovata.";
   }
 });
 
