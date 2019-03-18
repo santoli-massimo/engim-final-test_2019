@@ -32,7 +32,7 @@
     > **Luigi** *completo*
 
 10. Ogni 5 secondi il colore dell head cambia (opzionale: tasto per start stop )
-    > **Khalil**
+    > **Khalil** *completo*
 
 11. Form che chiede di indovinare un numero da 1 a 1000 se il numero non è giusto ti dice se il numeor corretto è maggiore o minore di quello inserito. (opzionale il numero da indovinare è casuale)
     > **Fabrizio** *FINISHED* (Non sono riuscito a perfezionare alcuni effetti grafici...ci riproverò in seguito se sarà possibile...)

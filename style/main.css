@@ -463,3 +463,39 @@ img
 }
 
 /*---------End parr color-----------*/
+
+/* =============
+ * Color-Head
+ * ============= */
+
+ .nav{
+    margin: 0;
+    padding: 0;
+    background:#FAEBD7;
+}
+#hstartstop{
+    text-align: center;
+    font-size: 60px;
+    padding: 10px 20px;
+}
+.btn1,.btn2{
+    text-align: center;
+    margin-top: 50px;
+}
+.btn1{
+    color: #3498db;
+}
+.btn2{
+    color:#7FFFD4;
+}
+.btn1:hover{
+    color:#7FFFD4;
+}
+.btn2:hover{
+    color: #3498db;
+}
+
+
+/*-----------------------
+FINE Color-Head
+------------------------*/
